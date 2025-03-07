@@ -1,0 +1,49 @@
+@import '../../../styles/abstracts/responsive';
+
+:host {
+  font-family: var(--b2b-font-family);
+  font-weight: var(--b2b-font-weight-regular);
+  color: var(--b2b-brand-blue-02);
+  position: relative;
+  z-index: 1;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 0.3s ease-in-out;
+  
+  @include b2b-breakpoint('lg') {
+    display: none;
+  }
+
+  &.hidden {
+    display: none;
+  }
+
+  ::ng-deep .b2b-options {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+
+    @include b2b-breakpoint('lg') {
+      flex-direction: row;
+      column-gap: 2rem;
+    }
+  }
+
+  ::ng-deep .b2b-bottom-divider {
+    border-bottom: 1px solid var(--b2b-gray-scale-03);
+  }
+
+  ::ng-deep .b2b-mobile-menu-section {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  ::ng-deep .b2b-mobile-menu-option {
+    padding: 1rem;
+    
+    &:active {
+      background-color: var(--b2b-gray-scale-04);
+    }
+  }
+}

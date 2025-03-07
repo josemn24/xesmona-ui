@@ -1,0 +1,24 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>CSS Variable</th>
+      <th>Value</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let token of spacings">
+      <td>
+        <span class="b2b-class-name">{{ token.name }}</span>
+      </td>
+      <td>
+        <span class="b2b-property">{{ token.cssVariable }}</span>
+      </td>
+      <td>
+        <span class="b2b-property">{{ token.value }}</span>
+      </td>
+      <td><div class="example-box" [ngClass]="token.exampleClass"></div></td>
+    </tr>
+  </tbody>
+</table>

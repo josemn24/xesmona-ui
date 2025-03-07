@@ -1,0 +1,33 @@
+:host {
+  font-family: var(--b2b-font-family);
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    span {
+      font-size: 14px;
+    }
+  }
+  
+  .b2b-class-name {
+    font-family: var(--b2b-font-family);
+    font-weight: var(--b2b-font-weight-medium);
+    color: var(--b2b-brand-blue-01);
+  }
+  
+  .b2b-property {
+    color: var(--b2b-brand-blue-02);
+  }
+
+  code {
+    background-color: var(--b2b-gray-scale-04);
+    padding: 2px 4px;
+    border-radius: 4px;
+  }
+}

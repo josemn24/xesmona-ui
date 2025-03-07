@@ -1,0 +1,53 @@
+:host {
+  .b2b-pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    
+    .b2b-pagination-navigation-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+
+      button {
+        background: none;
+        border: none;
+        padding: 0;
+        border-radius: 0.25rem;
+        --b2b-icon-color: var(--b2b-brand-blue-02);
+        
+        &:focus {
+          outline-color: var(--b2b-state-info-01);
+        }
+
+        &:not([disabled]):hover {
+          cursor: pointer;
+          background: var(--b2b-gray-scale-04);
+        }
+
+        &[disabled] {
+          color: var(--b2b-state-disabled);
+          --b2b-icon-color: var(--b2b-state-disabled);
+        }
+
+      }
+    }
+
+    .b2b-pagination-paginator {
+      display: flex;
+      gap: 0.5rem;
+      color: var(--b2b-brand-blue-02);
+      font-family: var(--b2b-font-family);
+      font-size: 0.875rem;
+
+      .b2b-pagination-active-page {
+        font-weight: var(--b2b-font-weight-bold);
+      }
+    }
+
+    .b2b-pagination-buttons {
+      display: flex;
+      gap: 0.5rem;
+    }
+  }
+}

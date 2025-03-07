@@ -1,0 +1,21 @@
+:host {
+  button[b2b-floating-button] {
+    --b2b-floating-button-bg-color: var(--b2b-gray-scale-05);
+    --b2b-floating-button-color: var(--b2b-brand-red-01);
+    --b2b-floating-button-padding: 11px;
+    --b2b-floating-button-border-width: 1px;
+    --b2b-floating-button-border-color: #E8EBED;
+  
+    &:hover {
+      --b2b-floating-button-bg-color: var(--b2b-gray-scale-04);
+      --b2b-floating-button-color: var(--b2b-brand-red-03);
+    }
+
+    &:focus-visible {
+      outline-offset: -2px;
+      outline-width: 2px;
+      outline-style: solid;
+      outline-color: var(--b2b-state-info-01);
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<div class="b2b-carousel-container" [class.b2b-carousel-buttons-offset]="buttonsOffset()">
+  <div class="b2b-carousel-slides-container">
+    <div class="b2b-carousel-slides-wrapper">
+      <div
+        #carouselWrapper
+        class="b2b-carousel-items"
+        [style.transform]="getTransFormStyle()"
+        (touchstart)="onTouchStart($event)"
+        (touchmove)="onTouchMove($event)"
+        (touchend)="onTouchEnd()"
+      >
+        <div class="b2b-carousel-item" *ngFor="let item of this.items; let i = index" [style.flex]="getFlexStyle()">
+          <ng-container *ngTemplateOutlet="item"></ng-container>
+        </div>
+      </div>
+    </div>
+
+    <button class="b2b-carousel-button b2b-carousel-button-left" [disabled]="isLeftButtonDisabled()" (click)="onLeftButtonClick()">
+      <b2b-icon name="icon-simple-arrow-left" size="lg"></b2b-icon>
+    </button>
+    <button class="b2b-carousel-button b2b-carousel-button-right" [disabled]="isRightButtonDisabled()" (click)="onRightButtonClick()">
+      <b2b-icon name="icon-simple-arrow-right" size="lg"></b2b-icon>
+    </button>
+  </div>
+
+  <div class="b2b-carousel-pagination">
+    <b2b-carousel-pagination-bullets
+      [bullets]="paginationCount"
+      [(currentIndex)]="currentSlideIndex">
+    </b2b-carousel-pagination-bullets>
+  </div>
+</div>

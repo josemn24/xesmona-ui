@@ -1,0 +1,117 @@
+:host {
+  .b2b-notification-inline-wrapper {
+    display: flex;
+    animation: appear 300ms ease-out;
+ 
+    &.hidden {
+      display: none;
+      animation: dissapear 300ms ease-in;
+    }
+
+    @keyframes appear {
+      from {
+        display: none;
+        opacity: 0;
+      }
+      to {
+        display: flex;
+        opacity: 1;
+      }
+    }
+
+    @keyframes dissapear {
+      from {
+        display: flex;
+        opacity: 1;
+      }
+      to {
+        display: none;
+        opacity: 0;
+      }
+    }
+
+    .b2b-notification-inline-container {
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      justify-content: space-between;
+      gap: .5rem;
+      padding: 1rem;
+      border-radius: 4px;
+      border: 1px solid;
+
+      &.ok {
+        background-color: var(--b2b-state-success-bg);
+        border-color: var(--b2b-state-success-01);
+      }
+      
+      &.error {
+        background-color: var(--b2b-state-error-bg);
+        border-color: var(--b2b-state-error-01);
+      }
+    
+      &.alert {
+        background-color: var(--b2b-state-alert-bg);
+        border-color: var(--b2b-state-alert-01);
+      }
+    
+      &.info {
+        background-color: var(--b2b-state-info-bg);
+        border-color: var(--b2b-state-info-01);
+      }
+
+      .b2b-notification-inline-icon {
+        &.ok {
+          --b2b-icon-color: var(--b2b-state-success-01);
+        }
+        
+        &.error {
+          --b2b-icon-color: var(--b2b-state-error-01);
+        }
+      
+        &.alert {
+          --b2b-icon-color: var(--b2b-state-alert-01);
+        }
+      
+        &.info {
+          --b2b-icon-color: var(--b2b-state-info-01);
+        }
+      }
+
+      .b2b-notification-inline-body {
+        color: var(--b2b-brand-blue-01);
+        width: 100%;
+
+        & .title {
+          font-family: var(--b2b-font-family);
+          font-weight: var(--b2b-font-weight-bold);
+        }
+
+        & .description {
+          font-family: var(--b2b-font-family);
+          font-weight: var(--b2b-font-weight-regular);
+          margin-top: .5rem;
+          width: fit-content;
+        }
+      }
+
+      .b2b-notification-inline-actions {
+        margin-top: .5rem;
+      }
+
+      .b2b-notification-inline-close {
+
+        button {
+          padding: 0;
+          background: none;
+          border: none;
+
+          :hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+

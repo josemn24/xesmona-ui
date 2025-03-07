@@ -1,0 +1,12 @@
+@for (item of this.bulletsList(); track item; let i = $index) {
+  <span
+    #paginationBullet
+    class="b2b-carousel-pagination-bullet" 
+    role="tab"
+    [class.active]="isActive(i)"
+    [tabindex]="getTabIndex(i)"
+    [attr.aria-selected]="isActive(i)"
+    (click)="onPaginationBulletClick(i)"
+    (keydown)="onKeydown($event, i)">
+  </span>
+}

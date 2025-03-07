@@ -1,0 +1,7 @@
+:host {
+    --b2b-field-bank-wrapper-gap: 0.5rem;
+
+    ::ng-deep input[b2b-input]:not(:last-child) {
+      margin-right: var(--b2b-field-bank-wrapper-gap);
+    }
+}

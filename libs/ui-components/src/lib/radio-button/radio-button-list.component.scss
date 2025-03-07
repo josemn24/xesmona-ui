@@ -1,0 +1,21 @@
+:host {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    ::ng-deep li {
+      margin: 1rem 0 0 0;
+    }
+
+    &.b2b-list-horizontal {
+      ::ng-deep li {
+        display: inline-block;
+        margin-top: 0.5rem;
+        margin-right: 1.5rem;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+}

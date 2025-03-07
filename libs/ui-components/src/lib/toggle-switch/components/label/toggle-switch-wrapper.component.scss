@@ -1,0 +1,21 @@
+:host {
+  display: flex;
+  gap: 1rem;
+
+  ::ng-deep {
+    label[b2b-label] {
+      margin-top: 3px;
+  
+      &.b2b--required {
+        &::after {
+          content:" *";
+          color: var(--b2b-brand-red-01);
+        }
+      }
+
+      &.disabled {
+        --b2b-label-color: var(--b2b-state-disabled);
+      }
+    }
+  }
+}

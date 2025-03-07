@@ -1,0 +1,28 @@
+<div class="b2b-pagination-wrapper">
+  <div class="b2b-pagination-navigation-container">
+    <div class="b2b-pagination-buttons">
+      <button [attr.disabled]="isDisabled('first') || null" (click)="onFirst()">
+        <b2b-icon name="icon-first-page-arrow" size="lg"></b2b-icon>
+      </button>
+      <button [attr.disabled]="isDisabled('prev') || null" (click)="onPrev()">
+        <b2b-icon name="icon-simple-arrow-left" size="lg"></b2b-icon>
+      </button>
+    </div>
+
+    <div class="b2b-pagination-paginator">
+      {{ paginatorIntl.pageLabel }}
+      <span class="b2b-pagination-active-page">{{activePageIndex() + 1}}</span>
+      {{ paginatorIntl.pageLabelConnector }}
+      <span>{{ totalPages() }}</span>
+    </div>
+    
+    <div class="b2b-pagination-buttons">
+      <button [attr.disabled]="isDisabled('next') || null" (click)="onNext()">
+        <b2b-icon name="icon-simple-arrow-right" size="lg"></b2b-icon>
+      </button>
+      <button [attr.disabled]="isDisabled('last') || null" (click)="onLast()">
+        <b2b-icon name="icon-last-page-arrow" size="lg"></b2b-icon>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<div [ngClass]="getVisibility(visible)">
+  <div class="b2b-modal-wrapper">
+    <div class="b2b-modal-container">
+      <div class="b2b-modal-header">
+        <span>{{ custom ? title : '' }}</span>
+        <button (click)="onClose()">
+          <b2b-icon name="icon-close"></b2b-icon>
+        </button>
+      </div>
+
+      @if (custom) {
+        <div class="b2b-modal-content custom">
+          <ng-content select="[b2b-modal-content-custom]"></ng-content>
+        </div>
+      } @else {
+          <div class="b2b-modal-content">
+            <div [ngClass]="['b2b-modal-icon', iconState]">
+              <b2b-icon [name]="getIcon(iconState)" size="xl"></b2b-icon>
+            </div>
+            <div class="b2b-modal-title">{{ title }}</div>
+            <div class="b2b-modal-description">{{ description }}</div>
+          </div>
+      }
+    
+      <div class="b2b-modal-footer">
+        <ng-content select="[b2b-modal-footer]"></ng-content>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+@if (leftArrow) {
+    <button class="b2b-arrow-btn b2b-arrow-btn-left" (click)="onTranslateLeft()" [attr.disabled]="leftArrowIsDisabled()">
+        <b2b-icon name="icon-simple-arrow-left" size="lg"></b2b-icon>
+    </button>
+}
+
+<div #tabsContainer class="tab-list-container" (keydown)="onKeyDown($event)">
+    <div #tabsList class="tab-list" [style.transform]="tabsTranslateX()">
+        <div class="tabs" role="tablist">
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>
+
+@if (rightArrow) {
+    <button class="b2b-arrow-btn b2b-arrow-btn-right" (click)="onTranslateRight()" [attr.disabled]="rightArrowIsDisabled()">
+        <b2b-icon name="icon-simple-arrow-right" size="lg"></b2b-icon>
+    </button>
+}

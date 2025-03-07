@@ -1,0 +1,36 @@
+:host {
+  font-family: var(--b2b-label-font-family, var(--b2b-font-family));
+  font-weight: var(--b2b-label-font-weight, var(--b2b-font-weight-regular));
+  font-size: var(--b2b-label-font-size, 0.875rem);
+  color: var(--b2b-label-color, var(--b2b-brand-blue-02));
+
+  /* Styles for checkbox and radio button labels */
+  ::ng-deep input[b2b-checkbox]:not([disabled]),
+  ::ng-deep input[b2b-radio-button]:not([disabled]) {
+    cursor: pointer;
+  }
+
+  &:has(input[b2b-checkbox]),
+  &:has(input[b2b-radio-button]) {
+    &.b2b--required {
+      &::after {
+        content:" *";
+        color: var(--b2b-brand-red-01);
+      }
+    }
+  }
+
+  &:has(input[b2b-checkbox]:not([disabled])),
+  &:has(input[b2b-radio-button]:not([disabled])) {
+    cursor: pointer;
+  }
+
+  &:has(input[b2b-checkbox][disabled]),
+  &:has(input[b2b-radio-button][disabled]) {
+    --b2b-label-color: var(--b2b-state-disabled);
+  }
+
+  &.b2b--disabled {
+    --b2b-label-color: var(--b2b-state-disabled);
+  }
+}

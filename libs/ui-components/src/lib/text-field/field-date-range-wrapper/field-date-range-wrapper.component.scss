@@ -1,0 +1,40 @@
+:host {
+  font-family: var(--b2b-input-range-font-family, var(--b2b-font-family));
+  font-weight: var(--b2b-input-range-font-weight, var(--b2b-font-weight-regular));
+  font-size: var(--b2b-input-range-font-size, 1rem);
+  padding-top: var(--b2b-input-range-padding-top, var(--b2b-input-range-padding, 0.5rem));
+  padding-right: var(--b2b-input-range-padding-right, var(--b2b-input-range-padding, 0.5rem));
+  padding-bottom: var(--b2b-input-range-padding-bottom, var(--b2b-input-range-padding, 0.5rem));
+  padding-left: var(--b2b-input-range-padding-left, var(--b2b-input-range-padding, 0.5rem));
+  background-color: var(--b2b-input-range-bg-color);
+  color: var(--b2b-input-range-color);
+  border-radius: var(--b2b-input-range-border-radius, 0.125rem);
+  border-width: var(--b2b-input-range-border-width, 0.063rem);
+  border-style: var(--b2b-input-range-border-style, solid);
+  border-color: var(--b2b-input-range-border-color, var(--b2b-brand-blue-04));
+  width: var(--b2b-input-range-width, auto);
+
+  display: flex;
+  align-items: center;
+
+  ::ng-deep {
+    button:has(b2b-icon) {
+      background: none;
+      color: inherit;
+      border: none;
+      padding: 0;
+      outline: inherit;
+      cursor: pointer;
+      margin-left: 1rem;
+    }
+  
+    button > b2b-icon:last-of-type {
+      --b2b-icon-color: var(--b2b-brand-blue-02);
+    }
+  
+    button:focus-visible {
+      outline: auto;
+      outline-color: var(--b2b-state-info-01);
+    }
+  }
+}

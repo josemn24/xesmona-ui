@@ -15,7 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@xesmona-ui/ui-components": ["libs/ui-components/src/index.ts"]
+      "@xesmona-ui/ui-components": ["libs/ui-components/src/index.ts"],
+      "@mapfre-tech/b2b-components": [
+        "libs/ui-components/src/index.ts"
+      ],
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,0 +1,30 @@
+$breakpointXS: 360px;
+$breakpointSM: 480px;
+$breakpointMD: 768px;
+$breakpointLG: 960px;
+$breakpointXL: 1024px;
+$breakpointXXL: 1280px;
+$breakpoint3XL: 1366px;
+$breakpoint4XL: 1440px;
+
+$breakpoints: (
+  'xs': $breakpointXS,
+  'sm': $breakpointSM,
+  'md': $breakpointMD,
+  'lg': $breakpointLG,
+  'xl': $breakpointXL,
+  'xxl': $breakpointXXL,
+  '3xl': $breakpoint3XL,
+  '4xl': $breakpoint4XL,
+);
+
+@mixin b2b-breakpoint($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $min-width: map-get($breakpoints, $breakpoint);
+    @media (min-width: $min-width) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint `#{$breakpoint}` not defined in `$breakpoints` map.";
+  }
+}

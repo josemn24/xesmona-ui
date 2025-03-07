@@ -1,0 +1,82 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  font-family: var(--b2b-font-family);
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+
+  span {
+    font-size: 14px;
+  }
+}
+
+.b2b-class-name {
+  font-weight: var(--b2b-font-weight-medium);
+  color: var(--b2b-brand-blue-01);
+}
+
+.b2b-property {
+  color: var(--b2b-brand-blue-02);
+}
+
+.example-box {
+  display: inline-block;
+  background-color: var(--b2b-brand-blue-03);
+  width: 16px;
+  height: 16px;
+}
+
+.example-none {
+  width: 0;
+  height: 0;
+}
+
+.example-xs {
+  width: 4px;
+  height: 4px;
+}
+
+.example-s {
+  width: 8px;
+  height: 8px;
+}
+
+.example-unit {
+  width: 16px;
+  height: 16px;
+}
+
+.example-m {
+  width: 24px;
+  height: 24px;
+}
+
+.example-l {
+  width: 32px;
+  height: 32px;
+}
+
+.example-xl {
+  width: 40px;
+  height: 40px;
+}
+
+.example-xxl {
+  width: 48px;
+  height: 48px;
+}
+
+.example-3xl {
+  width: 56px;
+  height: 56px;
+}
+
+.example-4xl {
+  width: 64px;
+  height: 64px;
+}

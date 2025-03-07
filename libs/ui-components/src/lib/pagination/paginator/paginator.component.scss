@@ -1,0 +1,52 @@
+:host {
+  .b2b-paginator-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (max-width: 768px) {
+      justify-content: center;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    
+    .b2b-paginator-filter {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-family: var(--b2b-font-family);
+      font-size: 0.875rem;
+      color: var(--b2b-brand-blue-02);
+
+      ::ng-deep b2b-dropdown-select {
+        input[b2b-dropdown-input] {
+          padding-right: 1.875rem;
+        }
+
+        input[b2b-dropdown-input] + b2b-icon {
+          top: 0.25rem;
+          right: 0.25rem;
+        }
+
+        b2b-dropdown-menu {
+          li[b2b-menu-option] {
+            --b2b-dropdown-menu-option-font-size: 0.875rem;
+          }
+        }
+      }
+        
+
+      b2b-dropdown-select {
+        --b2b-dropdown-input-width: 1.5rem;
+        --b2b-dropdown-input-font-size: 0.875rem;
+        --b2b-dropdown-input-padding-top: 0.25rem;
+        --b2b-dropdown-input-padding-bottom: 0.25rem;
+      }
+
+      @media screen and (max-width: 768px) {
+        margin: 0 auto;
+      }
+    }
+  }
+}

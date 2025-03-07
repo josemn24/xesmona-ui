@@ -1,0 +1,107 @@
+@import '../../styles/abstracts/responsive';
+
+:host{
+  font-family: var(--b2b-font-family);
+  font-weight: var(--b2b-font-weight-regular);
+  &.marginLeft{
+    .accordion-content{
+      margin-left: 3rem;
+    }
+  }
+
+  .accordion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: var(--b2b-font-weight-medium);
+    color: var(--b2b-brand-blue-01);
+    padding: 1rem 0.5rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    &:focus {
+      outline-color: var(--b2b-state-info-01);
+    }
+  }
+
+  .accordion-header-with-gap {
+    display: flex;
+    align-items: center;
+    border-radius: 0.25rem;
+    justify-content: space-between;
+    gap: 1rem;
+    ::ng-deep b2b-icon {
+      --b2b-icon-color: var(--b2b-brand-blue-04);
+    }
+  }
+
+  .accordion-content {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: transparent;
+    color: var(--b2b-brand-blue-02);
+    font-size: 0.875rem;
+    margin: 0.5rem 0.5rem 1.5rem 0.5rem;
+    &[hidden] {
+      display: none;
+    }
+  }
+
+  .accordion-arrows {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .accordion-container {
+    border-bottom: 1px solid var(--b2b-gray-scale-03);
+    flex-direction: column;
+  }
+  .accordion-container.closed:hover {
+    background-color: var(--b2b-gray-scale-04);
+    border-bottom: 1px solid var(--b2b-brand-blue-02);
+  }
+
+  &.b2b {
+    &--large {
+      .accordion-header{
+        padding: 1.5rem 0.5rem;
+      }
+      .accordion-header-with-gap {
+        gap: 1.5rem;
+      }
+      .accordion-content{
+        font-size: 1rem;
+      }
+      .accordion-arrows,
+      .accordion-container {
+        line-height: 1.5rem;
+        font-size: 1.25rem;
+      }
+    }
+
+    @include b2b-breakpoint('md') {
+      .accordion-header,
+      .accordion-content {
+        font-size: 0.875rem;
+      }
+
+      .accordion-arrows,
+      .accordion-container {
+        font-size: 1.125rem;
+      }
+    }
+
+    @include b2b-breakpoint('lg') {
+      .accordion-header,
+      .accordion-content {
+        font-size: 1rem;
+      }
+
+      .accordion-arrows,
+      .accordion-container {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}

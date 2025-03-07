@@ -1,0 +1,124 @@
+:root {
+  /* ***************** */
+  /* ***   RED  *** */
+  /* ***************** */
+  // Brand Red (Old Primary)/01 Red
+  --b2b-brand-red-01: #d81e05;
+  // Brand Red/02 Red
+  --b2b-brand-red-02: #ac0404;
+  // Brand Red/03 Red
+  --b2b-brand-red-03: #780303;
+  // Brand Red/04 Red
+  --b2b-brand-red-04: #f6caca;
+
+  /* ***************** */
+  /* ***   BLUES  *** */
+  /* ***************** */
+  // Brand Blue (Old Secondary)/01 Blue
+  --b2b-brand-blue-01: #2d373d;
+  // Brand Blue (Old Secondary)/02 Blue
+  --b2b-brand-blue-02: #526570;
+  // Brand Blue/03 Blue
+  --b2b-brand-blue-03: #9cb0bc;
+  // Brand Blue/04 Blue
+  --b2b-brand-blue-04: #89969a;
+
+  /* ***************** */
+  /* ***   ORANGES  *** */
+  /* ***************** */
+  // Brand Orange/01 Orange
+  --b2b-brand-orange-01: #FAE1D0;
+
+  /* ***************** */
+  /* ***   GREY  *** */
+  /* ***************** */
+  // GreyScale/01 (Grey)
+  --b2b-gray-scale-01: #737373;
+  // GreyScale/02 (Grey)
+  --b2b-gray-scale-02: #c9c8c8;
+  // GreyScale/03 (Grey)
+  --b2b-gray-scale-03: #eae9e9;
+  // GreyScale/04 (Grey)
+  --b2b-gray-scale-04: #f5f5f5;
+  // GreyScale/05 (White)
+  --b2b-gray-scale-05: #fff;
+
+  /* ***************** */
+  /* ***   STATES  *** */
+  /* ***************** */
+  // States/Disabled
+  --b2b-state-disabled: #d2d4cf;
+  // States/Info01
+  --b2b-state-info-01: #0d82bd;
+  // States/Info02
+  --b2b-state-info-02: #b7daec;
+  // States/InfoBG
+  --b2b-state-info-bg: #eef6fb;
+  // States/Success01
+  --b2b-state-success-01: #008c47;
+  // States/Success02
+  --b2b-state-success-02: #dce5c1;
+  // States/SuccessBG
+  --b2b-state-success-bg: #f7f9f0;
+  // States/Error01
+  --b2b-state-error-01: #da2a2a;
+  // States/Error02
+  --b2b-state-error-02: #f6caca;
+  // States/ErrorBG
+  --b2b-state-error-bg: #fdf2f2;
+  // States/Alert01
+  --b2b-state-alert-01: #e46b15;
+  // States/Alert02
+  --b2b-state-alert-02: #fff4ec;
+  // States/AlertBG
+  --b2b-state-alert-bg: #fffaf6;
+
+  /* ***************** */
+  /* ***   CUSTOMER  *** */
+  /* ***************** */
+  // Customer/Gold
+  --b2b-customer-gold: #ac9316;
+  --b2b-customer-gold-bg: #e7dfba;
+  --b2b-customer-silver: #949494;
+  --b2b-customer-silver-bg: #d4d4d4;
+  --b2b-customer-platinum: #7994a4;
+  --b2b-customer-platinum-bg: #d7dfe4;
+
+  /* ***************** */
+  /* ***   SUPPORT  *** */
+  /* ***************** */
+  // Support/01
+  --b2b-support-01-dark-orange: #f2a105;
+  // Support/02
+  --b2b-support-02-light-orange: #ffb37f;
+  // Support/03
+  --b2b-support-03-yellow: #ffd618;
+  // Support/04
+  --b2b-support-04-green: #a2c617;
+  // Support/05
+  --b2b-support-05-turquoise: #0ca6b3;
+  // Support/06
+  --b2b-support-06-dark-pink: #e6078c;
+  // Support/07
+  --b2b-support-07-light-pink: #f282c5;
+  // Support/08
+  --b2b-support-08-purple: #a51783;
+  // Support/09
+  --b2b-support-09-red: #f33939;
+  // Support/10
+  --b2b-support-10-dark-brown: #734b30;
+  // Support/11
+  --b2b-support-11-light-brown: #c59672;
+
+  /* ***************** */
+  /* ***   TRANSPARENCIES  *** */
+  /* ***************** */
+  // Overlay/70
+  --b2b-transparencies-black-blue-70:rgba(45, 55, 61, 0.7);
+  // White/70
+  --b2b-transparencies-white-70:rgba(255, 255, 255, 0.7);
+  // White/40
+  --b2b-transparencies-white-40:rgba(255, 255, 255, 0.4);
+  // White/20
+  --b2b-transparencies-white-20:rgba(255, 255, 255, 0.2);
+}

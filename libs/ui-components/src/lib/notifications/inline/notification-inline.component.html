@@ -1,0 +1,27 @@
+<div [ngClass]="getVisibility(visible)">
+  <div [ngClass]="['b2b-notification-inline-container', state]">
+    <div [ngClass]="['b2b-notification-inline-icon', state]">
+      <b2b-icon [name]="getIcon(state)" size="md"></b2b-icon>
+    </div>
+
+    <div class="b2b-notification-inline-body">
+      <div class="title">{{ title }}</div>
+      @if (description) {
+        <p class="description">{{ description }}</p>
+      }
+      @if (hasActions) {
+        <div class="b2b-notification-inline-actions">
+          <ng-content select="[b2b-notification-inline-actions]"></ng-content>
+        </div>
+      }
+    </div>
+
+    @if (closable) {
+      <div class="b2b-notification-inline-close">
+        <button (click)="onClose()" aria-label="Close">
+          <b2b-icon name="icon-close" size="sm"></b2b-icon>
+        </button>
+      </div>
+    }
+  </div>
+</div>

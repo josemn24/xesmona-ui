@@ -1,0 +1,91 @@
+@import '../../styles/abstracts/responsive';
+
+:host {
+  ::ng-deep .b2b-bottom-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .b2b-width-full {
+      width: 100%;
+    }
+
+    button[b2b-button] {
+      justify-content: center;
+    }
+
+    /* Primary and secondary buttons */
+    .b2b-bottom-bar--main-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      .b2b-bottom-bar--secondary {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        &-row {
+          display: flex;
+          flex-direction: row;
+          gap: 1.5rem;
+        }
+      }
+    }
+
+    .b2b-bottom-bar--other-actions {
+      /* Icon buttons */
+      .b2b-bottom-bar--icons {
+        button {
+          border: none;
+          background: none;
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  @include b2b-breakpoint('md') {
+    ::ng-deep .b2b-bottom-bar {
+      flex-direction: row-reverse;
+      gap: 2rem;
+
+      button[b2b-button] {
+        --b2b-button-padding-top: 0.5rem;
+        --b2b-button-padding-bottom: 0.5rem;
+      }
+
+      .b2b-bottom-bar--main-actions {
+        flex-direction: row-reverse;
+
+        .b2b-bottom-bar--secondary {
+          flex-direction: row;
+        }
+      }
+
+      .b2b-bottom-bar--other-actions {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+
+        &:not(:has(.b2b-bottom-bar--icons)) {
+          justify-content: flex-end;
+        }
+
+        .b2b-bottom-bar--icons {
+          padding-right: 2rem;
+          border-right: 1px solid var(--b2b-gray-scale-02);
+          display: flex;
+          gap: 1.5rem;
+          align-items: center;
+        }
+
+        .b2b-bottom-bar--tertiary {
+          display: flex;
+          gap: 1.5rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+/** 
+* GRID COLUMNS - This file contains the grid column classes
+* CSS classes naming is based on TailwindCSS
+* https://tailwindcss.com/docs/grid-template-columns
+* https://tailwindcss.com/docs/grid-column
+**/
+
+.b2b-grid {
+    &.b2b-grid-cols-none {
+        grid-template-columns: none;
+    }
+
+    &.b2b-grid-cols-subgrid {
+        grid-template-columns: subgrid;
+    }
+
+    @for $i from 1 through 12 {
+        &.b2b-grid-cols-#{$i} {
+            grid-template-columns: repeat(#{$i}, 1fr);
+        }
+    }
+
+    &.b2b-auto-cols-auto {
+        grid-auto-columns: auto;
+    }
+
+    &.b2b-auto-cols-min {
+        grid-auto-columns: min-content;
+    }
+
+    &.b2b-auto-cols-max {
+        grid-auto-columns: max-content;
+    }
+
+    &.b2b-auto-cols-fr {
+        grid-auto-columns: minmax(0, 1fr);
+    }
+
+    .b2b-col-auto {
+        grid-column: auto;
+    }
+
+    .b2b-col-span-full {
+        grid-column: 1 / -1;
+    }
+
+    @for $i from 1 through 12 {
+        .b2b-col-span-#{$i} {
+            grid-column: span #{$i} / span #{$i};
+        }
+    }
+
+    .b2b-col-start-auto {
+        grid-column-start: auto;
+    }
+
+    @for $i from 1 through 12 {
+        .b2b-col-start-#{$i} {
+            grid-column-start: #{$i};
+        }
+    }
+
+    .b2b-col-end-auto {
+        grid-column-end: auto;
+    }
+
+    @for $i from 1 through 12 {
+        .b2b-col-end-#{$i} {
+            grid-column-end: #{$i};
+        }
+    }
+
+    @for $i from 1 through 12 {
+        .b2b-col-#{$i} {
+            grid-column: auto / span #{$i};
+        }
+    }
+}

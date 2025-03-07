@@ -1,0 +1,137 @@
+:host {
+  position: relative;
+  display: inline-block;
+
+  &.left-icon {
+    ::ng-deep input[b2b-input] {
+      padding-left: 2.5rem;
+    }
+
+    ::ng-deep b2b-icon {
+      position: absolute;
+      top: 0.5rem;
+
+      &:first-of-type {
+        --b2b-icon-color: var(--b2b-brand-blue-02);
+        left: 0.5rem;
+
+        &:has(+ input[b2b-input]:read-only:not([disabled])) {
+          --b2b-icon-color: var(--b2b-brand-blue-04);
+        }
+
+        &:has(+ input[b2b-input][disabled]) {
+          --b2b-icon-color: var(--b2b-state-disabled);
+        }
+      }
+    }
+
+    /* Styles for a button with an icon */
+    ::ng-deep button:first-of-type {
+      &:has(b2b-icon) {
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        outline: inherit;
+        cursor: pointer;
+        border-radius: 0.125rem;
+  
+        &:focus-visible {
+          outline-offset: 2px;
+          outline-width: 2px;
+          outline-style: solid;
+          outline-color: var(--b2b-state-info-01);
+        }
+
+        &:has(+ input[b2b-input]:read-only:not([disabled])) {
+          pointer-events: none;
+          b2b-icon {
+            --b2b-icon-color: var(--b2b-brand-blue-04);
+          }
+        }
+
+        &:has(+ input[b2b-input][disabled]) {
+          pointer-events: none;
+          b2b-icon {
+            --b2b-icon-color: var(--b2b-state-disabled);
+          }
+        }
+      }
+  
+      b2b-icon {
+        --b2b-icon-color: var(--b2b-brand-blue-02);
+        position: static;
+      }
+    }
+  }
+
+  &.right-icon {
+    ::ng-deep input[b2b-input] {
+      padding-right: 2.5rem;
+
+      + b2b-icon:last-of-type {
+        position: absolute;
+        --b2b-icon-color: var(--b2b-brand-blue-02);
+        top: 0.5rem;
+        right: 0.5rem;
+      }
+
+      &:read-only:not([disabled]) {
+        + b2b-icon:last-of-type {
+          --b2b-icon-color: var(--b2b-brand-blue-04);
+        }
+
+        + button:has(b2b-icon) {
+          pointer-events: none;
+          b2b-icon {
+            --b2b-icon-color: var(--b2b-brand-blue-04);
+          }
+        }
+      }
+
+      &[disabled] {
+        + b2b-icon:last-of-type {
+          --b2b-icon-color: var(--b2b-state-disabled);
+        }
+
+        + button:has(b2b-icon) {
+          pointer-events: none;
+          b2b-icon {
+            --b2b-icon-color: var(--b2b-state-disabled);
+          }
+        }
+      }
+
+      /* Styles for a button with an icon */
+
+      + button:has(b2b-icon) {
+        position: absolute;
+        top: 0.5rem;
+        left: auto;
+        right: 0.5rem;
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        outline: inherit;
+        cursor: pointer;
+        border-radius: 0.125rem;
+
+        &:focus-visible {
+          outline-offset: 2px;
+          outline-width: 2px;
+          outline-style: solid;
+          outline-color: var(--b2b-state-info-01);
+        }
+      }
+
+      + button > b2b-icon:last-of-type {
+        --b2b-icon-color: var(--b2b-brand-blue-02);
+        position: static;
+      }
+    }
+  }
+}

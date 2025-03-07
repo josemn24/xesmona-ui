@@ -1,0 +1,60 @@
+:host {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+
+    font-family: var(--b2b-link-font-family, var(--b2b-font-family));
+    font-weight: var(--b2b-link-font-weight, var(--b2b-font-weight-medium));
+    font-size: var(--b2b-link-font-size, var(--b2b-cta-font-size));
+    color: var(--b2b-link-color, var(--b2b-brand-red-01));
+    --b2b-icon-color: var(--b2b-link-color, var(--b2b-brand-red-01));
+
+    ::ng-deep b2b-icon {
+        &.b2b-icon-left {
+          margin-right: 0.25rem;
+        }
+        &.b2b-icon-right {
+          margin-left: 0.25rem;
+        }
+    }
+
+    &:hover{
+        --b2b-link-color: var(--b2b-brand-red-03);
+    }
+
+    &:focus {
+        outline: 2px solid var(--b2b-state-info-01);
+        outline-offset: 0.125rem;
+        border-radius: 4px;
+    }
+
+    &.b2b {
+        &--secondary {
+            --b2b-link-color: var(--b2b-brand-blue-02);
+        
+            &:hover {
+                --b2b-link-color: var(--b2b-brand-blue-01);
+            }
+        }
+
+        &--decorated {
+            text-underline-offset: 2px;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+        }
+
+        &--disabled {
+            --b2b-link-color: var(--b2b-state-disabled);
+            pointer-events: none;
+        }
+
+        &--large {
+            --b2b-link-font-size: 1rem;
+        }
+      
+        &--small {
+            --b2b-link-font-size: 0.875rem;
+        }
+    }
+}

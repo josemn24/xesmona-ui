@@ -1,0 +1,6 @@
+<span class="b2b-helper-text" [ngClass]="{'b2b--invalid': invalid}">
+    @if (invalid) {
+        <b2b-icon name="icon-warning" size="sm"></b2b-icon>
+    }
+    <ng-content></ng-content>
+</span>

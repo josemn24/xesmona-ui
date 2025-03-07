@@ -1,0 +1,16 @@
+<div class="accordion-container" [class.closed]="!isOpen()" >
+  <div #accordion class="accordion-header" tabindex="0" (click)="toggle()" (keydown)="handleKeyboardEvent($event)">
+    <div class="accordion-header-with-gap">
+      <ng-content select="[accordion-header]"></ng-content>
+      <span>{{ title }}</span>
+    </div>
+
+    <div class="accordion-arrows">
+      <b2b-icon [name]="arrowIcon()"></b2b-icon>
+    </div>
+  </div>
+
+  <div class="accordion-content" [ngClass]="{'open': isOpen()}" [hidden]="!isOpen()">
+    <ng-content select="[accordion-content]" ></ng-content>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+@import '../../styles/abstracts/responsive';
+
+:host {
+  font-family: var(--b2b-tab-font-family, var(--b2b-font-family));
+  font-weight: var(--b2b-tab-font-weight, var(--b2b-font-weight-regular));
+  font-size: var(--b2b-tab-font-size, 1rem);
+  padding-top: var(--b2b-tab-padding-top, var(--b2b-tab-padding, 0.5rem));
+  padding-right: var(--b2b-tab-padding-right, var(--b2b-tab-padding, 0));
+  padding-bottom: var(--b2b-tab-padding-bottom, var(--b2b-tab-padding, 0.75rem));
+  padding-left: var(--b2b-tab-padding-left, var(--b2b-tab-padding, 0));
+  background-color: var(--b2b-tab-bg-color);
+  color: var(--b2b-tab-color, var(--b2b-brand-blue-01));
+  border-color: var(--b2b-tab-border-color);
+  border-radius: var(--b2b-tab-border-radius, 0);
+  border-style: var(--b2b-tab-border-style, none);
+  border-width: var(--b2b-tab-border-width, 0);
+  cursor: pointer;
+
+  @include b2b-breakpoint('md') {
+    --b2b-tab-padding-right: 1.5rem;
+    --b2b-tab-padding-left: 1.5rem;
+  }
+
+  &:focus {
+    outline-offset: -2px;
+    outline-width: 2px;
+    outline-color: var(--b2b-state-info-01);
+  }
+
+  &:hover {
+    --b2b-tab-padding-bottom: 0.5rem;
+    border-bottom: 0.25rem solid var(--b2b-tab-border-color, var(--b2b-brand-blue-02));
+  }
+
+  &.selected {
+    --b2b-tab-padding-bottom: 0.5rem;
+    --b2b-tab-font-weight: var(--b2b-font-weight-medium);
+    border-bottom: 0.25rem solid var(--b2b-tab-border-color, var(--b2b-brand-red-01));
+    cursor: default;
+  }
+}

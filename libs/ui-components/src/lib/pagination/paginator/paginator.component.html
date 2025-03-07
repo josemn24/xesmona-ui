@@ -1,0 +1,13 @@
+<div class="b2b-paginator-wrapper">
+  @if (pageSizeOptions() && pageSizeOptions().length > 0) {
+    <div class="b2b-paginator-filter">
+      <b2b-dropdown-select
+        [options]="pageSizeOptions()"
+        [selectedOption]="pageSize()"
+        (selectionChange)="onPaginationSizeChange($event)">
+      </b2b-dropdown-select>
+      {{ paginatorIntl.resultsPerPageLabel }}
+    </div>
+  }
+  <b2b-pagination [(activePageIndex)]="pageIndex" [totalPages]="totalPages()"></b2b-pagination>
+</div>

@@ -1,0 +1,62 @@
+:host {
+  .b2b-progress-bar-inline-container {
+
+    progress[value] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: 1px solid;
+        border-color: var(--b2b-brand-blue-04);
+        height: 1rem;
+        border-radius: 0 10rem 10rem 0;
+        background: var(--b2b-gray-scale-05);
+        width: -webkit-fill-available;
+        width: -moz-available;
+
+        @media screen and (min-width: 961px) {
+          min-width: 600px;
+        }
+        
+        @media screen and (max-width: 960px) {
+          min-width: 328px;
+        }
+      }
+    
+      progress[value]::-webkit-progress-bar {
+        border-radius: 0 10rem 10rem 0;
+        background: var(--b2b-gray-scale-05);
+      }
+    
+      progress[value]::-webkit-progress-value {
+        border-radius: 0 10rem 10rem 0;
+        background: var(--b2b-brand-blue-02);
+      }
+    
+      progress[value]::-moz-progress-bar {
+        border-radius: 0 10rem 10rem 0;
+        background: var(--b2b-brand-blue-02);
+      }
+    
+    .b2b-progress-bar-inline-header {
+      display: flex;
+      justify-content: space-between;
+      overflow: hidden;
+      font-size: var(--b2b-progress-bar-font-size, 0.875rem);
+      font-family: var(--b2b-progress-bar-font-family, var(--b2b-font-family));
+      font-weight: var(--b2b-progress-bar-font-weight, var(--b2b-font-weight-regular));
+      color: var(--b2b-progress-bar-color, var(--b2b-brand-blue-02));
+      text-decoration: none;
+      white-space: nowrap;
+      margin-bottom: .625rem;
+
+      @media screen and (max-width: 960px) {
+        font-size: var(--b2b-progress-bar-font-size, 1rem);
+      }
+
+      .b2b-progress-bar-inline-title {
+        color: var(--b2b-progress-bar-color, var(--b2b-brand-blue-01));
+      }
+    }
+  }
+}
+

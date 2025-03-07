@@ -1,0 +1,131 @@
+:host {
+  max-width: fit-content;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+
+  .b2b-chip-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.25rem;
+    align-items: center;
+    height: fit-content;
+    border-radius: 999px;
+    color: var(--b2b-brand-blue-02);
+    font-size: var(--b2b-text-caption-s-font-size);
+    font-family: var(--b2b-font-family);
+    font-weight: var(--b2b-font-weight-regular);
+    background-color: var(--b2b-gray-scale-04);
+    padding: 0.25rem 0.75rem;
+
+    &.b2b--large {
+      padding: 0.5rem 1rem;
+      font-size: var(--b2b-text-caption-m-font-size);
+    }
+    
+    &.b2b--removable {
+      padding: 0.25rem 0.25rem 0.25rem 0.75rem;
+      
+      &.b2b--large {
+        padding: 0.5rem 0.5rem 0.5rem 1rem;
+      }
+    }
+
+    &.b2b--selected {
+      background-color: var(--b2b-brand-blue-02);
+      color: var(--b2b-gray-scale-05);
+      border-color: var(--b2b-brand-blue-02);
+      padding-right: 0.75rem;
+
+      &.b2b--large {
+        padding: 0.5rem 1rem;
+      }
+
+      button {
+        color: var(--b2b-gray-scale-05);
+      }
+
+      &:hover {
+        background-color: var(--b2b-brand-blue-02);
+        color: var(--b2b-gray-scale-05);
+        border-color: var(--b2b-brand-blue-02);
+
+        button {
+          color: var(--b2b-gray-scale-05);
+        }
+      }
+    }
+
+    &:hover {
+      background-color: var(--b2b-gray-scale-03);
+      color: var(--b2b-brand-blue-01);
+      cursor: pointer;
+      
+        button {
+          color: var(--b2b-brand-blue-01);
+        }
+    }
+
+    button {
+      border:none;
+      background: none;
+      padding: 0;
+      color: var(--b2b-brand-blue-02);
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &.b2b--outlined {
+      border: 1px solid;
+      background-color: var(--b2b-gray-scale-05);
+      border-color: var(--b2b-brand-blue-04);
+      color: var(--b2b-brand-blue-02);
+
+      &:hover {
+        background-color: var(--b2b-gray-scale-03);
+        border-color: var(--b2b-brand-blue-01);
+        color: var(--b2b-brand-blue-01);
+        cursor: pointer;
+
+          button {
+            color: var(--b2b-brand-blue-01);
+          }
+      }
+
+      &.b2b--selected {
+        background-color: var(--b2b-brand-blue-02);
+        color: var(--b2b-gray-scale-05);
+        border-color: var(--b2b-brand-blue-02);
+        padding: 0.25rem 0.75rem;
+
+        &.b2b--large {
+            padding: 0.5rem 1rem;
+          }
+        
+        &:hover {
+          background-color: var(--b2b-brand-blue-02);
+          color: var(--b2b-gray-scale-05);
+          border-color: var(--b2b-brand-blue-02);
+        
+          button {
+            color: var(--b2b-gray-scale-05);
+          }
+        }
+      }
+    }
+  }
+
+  .b2b-chip-label {
+    align-items: flex-end;
+  }
+
+  &:focus-visible {
+    outline-offset: 2px;
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: var(--b2b-state-info-01);
+    border-radius: 999px;
+  }
+}

@@ -1,0 +1,49 @@
+:host {
+    div[b2b-auto-complete-container] {
+        position: relative;
+        width: fit-content;
+    }
+
+    div[b2b-auto-complete-container].show-autocomplete {
+        b2b-search-field:has(+ b2b-search-autocomplete:not(:empty)) {
+            ::ng-deep input[b2b-input] {
+                border-bottom: none;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+        
+                &:focus {
+                    outline-style: none;
+                }
+            }
+        }
+    }
+
+    b2b-search-autocomplete {
+        width: 100%;
+        position: absolute;
+        z-index: 5;
+    }
+
+    &.b2b-width-full {
+        width: 100%;
+
+        div[b2b-auto-complete-container] {
+            width: auto;
+        }
+
+        b2b-search-autocomplete {
+            ::ng-deep ul {
+                width: auto;
+            }
+        }
+    
+        ::ng-deep div[b2b-field-icon-wrapper] {
+            width: 100%;
+        }
+
+        input[b2b-input] {
+            box-sizing: border-box;
+            --b2b-input-width: 100%;
+        }
+    }
+}

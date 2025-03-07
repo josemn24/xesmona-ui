@@ -1,0 +1,90 @@
+@import '../../../styles/abstracts/responsive';
+
+:host {
+  @include b2b-breakpoint('lg') {
+    display: none;
+  }
+
+  font-family: var(--b2b-font-family);
+  font-weight: var(--b2b-font-weight-regular);
+  display: block;
+
+  .b2b-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  
+    .b2b-header-logo {
+      display: flex;
+      column-gap: 1.5rem;
+      align-items: center;
+      
+      ::ng-deep:not(:last-child) {
+        display: flex;
+        &::after {
+          content: "/";
+          padding-left: 1.5rem;
+          color: var(--b2b-brand-blue-03);
+          font-size: 1rem;
+          font-family: var(--b2b-font-family);
+          font-weight: var(--b2b-font-weight-regular);
+        }
+      }
+
+      ::ng-deep.logo-app-title {
+        color: var(--b2b-brand-blue-04);
+        font-size: 0.875rem;
+        font-weight: var(--b2b-font-weight-medium);
+      }
+    }
+  
+    .b2b-header-functions {
+      display: flex;
+      column-gap: 1.5rem;
+      align-items: center;
+
+      ::ng-deep.header-icon {
+        color: var(--b2b-brand-blue-02);
+      }
+      ::ng-deep button.header-icon {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+
+        &:focus {
+          outline-color: var(--b2b-state-info-01);
+          outline-offset: 2px;
+        }
+      }
+    }
+
+    &:has(+ .b2b-sub-header:empty) {
+      border-bottom: 1px solid var(--b2b-gray-scale-03);
+    }
+  }
+
+  .b2b-sub-header {
+    font-weight: var(--b2b-font-weight-medium);
+    color: var(--b2b-brand-blue-04);
+    font-size: 0.875rem;
+    background-color: var(--b2b-gray-scale-04);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:not(:empty) {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  &.b2b-header-mobile-padding {
+    .b2b-header,
+    .b2b-sub-header {
+      padding-right: 1rem;
+      padding-left: 1rem;
+    }
+  }
+}

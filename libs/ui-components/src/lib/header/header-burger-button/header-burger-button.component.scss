@@ -1,0 +1,12 @@
+@import '../../../styles/abstracts/responsive';
+
+:host {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  @include b2b-breakpoint('lg') {
+    display: none;
+  }
+}

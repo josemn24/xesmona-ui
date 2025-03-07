@@ -1,0 +1,31 @@
+<div class="b2b-container">
+    <div class="b2b-container-header" [attr.tabindex]="tabIndex()" (keypress)="onKeyboardEvent($event)" (click)="toggleCollapse()">
+        @if (title()) {
+            <span class="b2b-container-title">{{ title() }}</span>
+        }
+
+        <div class="b2b-container-functions">
+            <ng-content select="[b2b-container-header]"></ng-content>
+
+            @if (isFoldable()) {
+                <div class="b2b-container-arrow">
+                    <b2b-icon [name]="arrowIcon()"></b2b-icon>
+                </div>
+            }
+        </div>
+    </div>
+    
+    @if (!isFoldable() || !containerFolded()) {
+        <div class="b2b-container-separator">
+            <hr>
+        </div>
+
+        <div class="b2b-container-body">
+            <ng-content select="[b2b-container-body]"></ng-content>
+        </div>
+
+        <div class="b2b-container-footer">
+            <ng-content select="[b2b-container-footer]"></ng-content>
+        </div>
+    }
+</div>

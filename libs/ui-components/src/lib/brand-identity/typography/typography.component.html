@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>CSS Variable</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let typography of typographies">
+      <td>
+          <span class="b2b-class-name">{{ typography.name }}</span>
+      </td>
+      <td>
+          <span class="b2b-property">{{ typography.cssVariables }}</span>
+      </td>
+      <td>
+        <span class="b2b-property">{{ typography.value }}</span>
+      </td>
+    </tr>
+  </tbody>
+</table>

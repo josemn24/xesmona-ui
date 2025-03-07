@@ -1,0 +1,50 @@
+:host {
+  width: fit-content;
+
+  ::ng-deep label[b2b-label] {
+    display: block;
+    width: fit-content;
+    margin-bottom: 4px;
+
+    &.b2b--required {
+      &::after {
+        content:" *";
+        color: var(--b2b-brand-red-01);
+      }
+    }
+
+    &:has(+ textarea[b2b-text-area][disabled]),
+    &:has(+ div[b2b-field-icon-wrapper] > textarea[b2b-text-area][disabled]) {
+      --b2b-label-color: var(--b2b-state-disabled);
+    }
+  }
+
+  ::ng-deep b2b-helper-text {
+    display: block;
+    width: fit-content;
+  }
+
+  ::ng-deep textarea[b2b-text-area] + b2b-helper-text {
+    margin-top: 4px;
+  }
+
+  ::ng-deep .b2b-text-helper-counter {
+    margin-top: 4px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  ::ng-deep .b2b-text-counter-only {
+    margin-top: 4px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &.b2b-width-full {
+    width: 100%;
+
+    ::ng-deep textarea[b2b-text-area] {
+      --b2b-text-area-width: 100%;
+    }
+  }
+}

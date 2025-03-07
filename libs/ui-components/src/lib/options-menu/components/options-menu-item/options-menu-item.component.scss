@@ -1,0 +1,60 @@
+:host {
+  font-family: var(--b2b-font-family);
+  font-weight: var(--b2b-font-weight-regular);
+  color: var(--b2b-brand-blue-02);
+  padding-top: 0.5rem;
+  line-height: 1.5rem;
+  --b2b-icon-color: var(--b2b-brand-blue-02);
+
+  .b2b-menu-item-content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 1rem;
+    padding-bottom: 7px;
+    border-bottom: 1px solid transparent;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: var(--b2b-brand-blue-01);
+    --b2b-icon-color: var(--b2b-brand-blue-01);
+    background: var(--b2b-gray-scale-04);
+    .b2b-menu-item-content {
+      border-bottom: 1px solid var(--b2b-brand-blue-02);
+    }
+  }
+
+  &:focus {
+    outline-offset: -2px;
+    outline-color: var(--b2b-state-info-01);
+  }
+
+  &.b2b--selected {
+    color: var(--b2b-brand-blue-01);
+    --b2b-icon-color: var(--b2b-brand-blue-01);
+    font-family: var(--b2b-font-family);
+    font-weight: var(--b2b-font-weight-medium);
+  }
+
+  &[disabled] {
+    pointer-events: none;
+    color: var(--b2b-state-disabled);
+    --b2b-icon-color: var(--b2b-state-disabled);
+  }
+
+  /* Use case for being an anchor tag */
+  &a {
+    display: block;
+    text-decoration: none;
+  }
+}
+
+/* Use case for breadcrumb with link */
+:host-context(b2b-breadcrumb-item) {
+  width: 100%;
+
+  &:focus {
+    outline-offset: -2px;
+  }
+}

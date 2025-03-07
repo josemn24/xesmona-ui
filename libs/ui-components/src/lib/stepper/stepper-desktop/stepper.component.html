@@ -1,0 +1,14 @@
+<ul class="b2b-stepper-container">
+   @for (step of steps; track step; let i = $index) {
+      <b2b-step
+         [number]="i + 1"
+         [title]="step.title"
+         [subtitle]="step.subtitle"
+         [state]="getStepsState(step)"
+         [disabled]="isDisabledStep(step)"
+         (click)="onStepChange(step)"
+         (keydown.enter)="onStepChange(step)"
+         (keydown.space)="onStepChange(step)">
+      </b2b-step>
+   }
+</ul>

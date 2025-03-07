@@ -1,0 +1,6 @@
+<svg [attr.width]="size" [attr.height]="size" [attr.viewBox]="viewBox" version="1.1" xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)">
+  <circle [attr.r]="circleRadius+3.5" [attr.cx]="circleXY" [attr.cy]="circleXY" fill="transparent" stroke="var(--b2b-brand-blue-04, #89969a)" stroke-width="1" />
+  <circle [attr.r]="circleRadius-3.5" [attr.cx]="circleXY" [attr.cy]="circleXY" fill="transparent" stroke="var(--b2b-brand-blue-04, #89969a)" stroke-width="1" />
+  <circle [attr.r]="circleRadius" [attr.cx]="circleXY" [attr.cy]="circleXY" stroke="var(--b2b-brand-blue-02, #526570)" [attr.stroke-width]="progressWidth" stroke-linecap="round" [attr.stroke-dashoffset]="dashOffset" fill="transparent" [attr.stroke-dasharray]="circumference"></circle>
+  <text #text [attr.x]="textX" [attr.y]="textY" fill="var(--b2b-brand-blue-02, #526570)" font-size="14px" style="font-family: var(--b2b-font-family)">{{ progress }}%</text>
+</svg>

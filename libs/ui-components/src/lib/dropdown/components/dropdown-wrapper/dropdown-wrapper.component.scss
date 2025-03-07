@@ -1,0 +1,38 @@
+:host {
+  ::ng-deep label[b2b-label] {
+    display: block;
+    width: fit-content;
+    margin-bottom: 4px;
+
+    &.b2b--required {
+      &::after {
+        content:" *";
+        color: var(--b2b-brand-red-01);
+      }
+    }
+
+    &:has(+ input[b2b-dropdown-input]:required),
+    &:has(+ div[b2b-dropdown-icon-wrapper] > input[b2b-dropdown-input]:required) {
+      &::after {
+        content:" *";
+        color: var(--b2b-brand-red-01);
+      }
+    }
+
+    &:has(+ input[b2b-dropdown-input][disabled]),
+    &:has(+ div[b2b-dropdown-icon-wrapper] > input[b2b-dropdown-input][disabled]) {
+      --b2b-label-color: var(--b2b-state-disabled);
+      pointer-events: none;
+    }
+  }
+
+  ::ng-deep .helper-text {
+    display: block;
+    width: fit-content;
+    margin-top: 4px;
+    font-family: var(--b2b-font-family);
+    font-weight: var(--b2b-font-weight-regular);
+    font-size: 0.875rem;
+    color: var(--b2b-brand-blue-02);
+  }
+}

@@ -1,0 +1,29 @@
+@import '../../../styles/abstracts/responsive';
+
+:host {
+    &.xs {
+        svg {
+            width: 86px;
+            height: 10px;
+        }
+    }
+    
+    &.sm {
+        svg {
+            width: 137px;
+            height: 16px;
+        }
+    }
+    
+    &.md {
+        svg {
+            width: 163px;
+            height: 19px;
+        }
+    }
+    
+    .mapfre-logo {
+        display: flex;
+        align-items: center;
+    }
+}

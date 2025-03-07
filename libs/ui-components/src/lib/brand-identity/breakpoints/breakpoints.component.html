@@ -1,0 +1,26 @@
+<table>
+  <thead>
+    <tr>
+      <th>Breakpoint</th>
+      <th>Screen size</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let breakpoint of breakPoints">
+      <td>
+        <span class="b2b-class-name">{{ breakpoint.label }}</span>
+      </td>
+      <td>
+        <span class="b2b-property">>={{ breakpoint.value }}</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>You will find these breakpoints in a Sass map in our <code>_responsive.scss</code> stylesheet</p>
+
+<pre>{{ mapExample }}</pre>
+
+<p>Importing <code>_responsive.scss</code> stylesheet, you can use the <code>b2b-breakpoint</code> mixin. Example:</p>
+
+<pre>{{ mixinExample }}</pre>

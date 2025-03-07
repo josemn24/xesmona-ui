@@ -1,0 +1,46 @@
+:host {
+  --b2b-radio-button-bg-color: var(--b2b-gray-scale-05);
+  --b2b-radio-button-border-color: var(--b2b-brand-blue-04);
+  --b2b-radio-button-border-radius: 50%;
+  --b2b-radio-button-border-style: solid;
+  --b2b-radio-button-border-width: 2px;
+  --b2b-radio-button-width: 1rem;
+  --b2b-radio-button-height: 1rem;
+
+  appearance: none;
+  vertical-align: middle;
+  margin: 0 0.5rem 0.125rem 0;
+
+  &::before {
+    position: relative;
+    display: flex;
+    content: "";
+    width: var(--b2b-radio-button-width);
+    height: var(--b2b-radio-button-height);
+    background-color: var(--b2b-radio-button-bg-color);
+    border-width: var(--b2b-radio-button-border-width);
+    border-style: var(--b2b-radio-button-border-style);
+    border-color: var(--b2b-radio-button-border-color);
+    border-radius: var(--b2b-radio-button-border-radius);
+  }
+
+  &:checked::before {
+    justify-content: center;
+    content: url(../../assets/icons/icon-dot.svg);
+    --b2b-radio-button-border-color: var(--b2b-brand-blue-02);
+  }
+
+  &.b2b--invalid {
+    --b2b-radio-button-border-color: var(--b2b-state-error-01);
+    --b2b-radio-button-bg-color: var(--b2b-state-error-bg);
+  }
+
+  &:focus {
+    outline-color: var(--b2b-state-info-01);
+    outline-offset: 0.25rem;
+  }
+
+  &[disabled]::before {
+    border: 2px solid var(--b2b-state-disabled);
+  }
+}

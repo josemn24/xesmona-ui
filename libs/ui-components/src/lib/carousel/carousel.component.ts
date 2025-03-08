@@ -20,7 +20,6 @@ import { B2bIconComponent } from '../icon/icon.component';
   styleUrls: ['./carousel.component.scss'],
   standalone: true,
   imports: [CommonModule, B2bIconComponent, B2bCarouselBulletsComponent],
-  // eslint-disable-next-line @angular-eslint/no-host-metadata-property
   host: {
     '(window:resize)': 'onViewportResize()',
   },

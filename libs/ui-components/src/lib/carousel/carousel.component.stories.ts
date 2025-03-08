@@ -6,9 +6,8 @@ import {
 } from '@storybook/angular';
 import { B2bCarouselComponent } from './carousel.component';
 import { ReplaceMeComponent } from '../../shared/components/replace-me.component';
-import { InputSignal, signal } from '@angular/core';
+import { signal } from '@angular/core';
 import { B2bCardPrimaryComponent } from '../card/card-primary/card-primary.component';
-import { sign } from 'crypto';
 
 type StoryType = B2bCarouselComponent & { carouselItems: any[] };
 

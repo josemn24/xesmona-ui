@@ -1,0 +1,61 @@
+:host {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  padding: var(--b2b-floating-button-padding, 0.75rem);
+  background-color: var(--b2b-floating-button-bg-color);
+  color: var(--b2b-floating-button-color);
+  border-color: var(--b2b-floating-button-border-color);
+  border-radius: var(--b2b-floating-button-border-radius, 50%);
+  border-style: var(--b2b-floating-button-border-style, solid);
+  border-width: var(--b2b-floating-button-border-width, 0px);
+  box-shadow: var(--b2b-floating-button-box-shadow, 0 0.25rem 0.5rem 0 #2D373D40);
+  --b2b-icon-color: var(--b2b-floating-button-color);
+
+  ::ng-deep b2b-icon {
+    &.b2b-icon-left {
+      margin-right: 0.25rem;
+    }
+    &.b2b-icon-right {
+      margin-left: 0.25rem;
+    }
+  }
+
+  &.b2b {
+    &--primary {
+      --b2b-floating-button-bg-color: var(--b2b-brand-red-01);
+      --b2b-floating-button-color: var(--b2b-gray-scale-05);
+  
+      &:hover {
+        --b2b-floating-button-bg-color: var(--b2b-brand-red-03);
+      }
+  
+      &:focus-visible {
+        outline-offset: 2px;
+        outline-width: 2px;
+        outline-style: solid;
+        outline-color: var(--b2b-state-info-01);
+      }
+    }
+  
+    &--secondary {
+      --b2b-floating-button-bg-color: var(--b2b-gray-scale-05);
+      --b2b-floating-button-color: var(--b2b-brand-blue-02);
+      --b2b-floating-button-padding: 11px;
+      --b2b-floating-button-border-width: 1px;
+      --b2b-floating-button-border-color: #E8EBED;
+  
+      &:hover {
+        --b2b-floating-button-bg-color: var(--b2b-gray-scale-04);
+        --b2b-floating-button-color: var(--b2b-brand-blue-01);
+      }
+  
+      &:focus-visible {
+        outline-offset: -2px;
+        outline-width: 2px;
+        outline-style: solid;
+        outline-color: var(--b2b-state-info-01);
+      }
+    }
+  }
+}

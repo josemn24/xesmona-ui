@@ -1,0 +1,58 @@
+:host {
+  --b2b-checkbox-bg-color: var(--b2b-gray-scale-05);
+  --b2b-checkbox-border-color: var(--b2b-brand-blue-04);
+  --b2b-checkbox-border-radius: 2px;
+  --b2b-checkbox-border-style: solid;
+  --b2b-checkbox-border-width: 2px;
+  --b2b-checkbox-width: 1rem;
+  --b2b-checkbox-height: 1rem;
+
+  appearance: none;
+  vertical-align: middle;
+  margin: 0 0.5rem 0.125rem 0;
+
+  &::before {
+    position: relative;
+    display: flex;
+    content: "";
+    width: var(--b2b-checkbox-width);
+    height: var(--b2b-checkbox-height);
+    background-color: var(--b2b-checkbox-bg-color);
+    border-width: var(--b2b-checkbox-border-width);
+    border-style: var(--b2b-checkbox-border-style);
+    border-color: var(--b2b-checkbox-border-color);
+    border-radius: var(--b2b-checkbox-border-radius);
+  }
+
+  &:checked::before {
+    justify-content: center;
+    content: url(/assets/b2b-components/components/icon-check-fill.svg);
+    --b2b-checkbox-bg-color: var(--b2b-gray-scale-05);
+    --b2b-checkbox-border-style: none;
+    --b2b-checkbox-width: 1.25rem;
+    --b2b-checkbox-height: 1.25rem;
+  }
+
+  &:indeterminate::before {
+    justify-content: center;
+    content: url(/assets/b2b-components/components/icon-minus-fill.svg);
+    --b2b-checkbox-bg-color: var(--b2b-gray-scale-05);
+    --b2b-checkbox-border-style: none;
+    --b2b-checkbox-width: 1.25rem;
+    --b2b-checkbox-height: 1.25rem;
+  }
+
+  &.b2b--invalid {
+    --b2b-checkbox-border-color: var(--b2b-state-error-01);
+    --b2b-checkbox-bg-color: var(--b2b-state-error-bg);
+  }
+
+  &:focus {
+    outline-color: var(--b2b-state-info-01);
+    outline-offset: 0.25rem;
+  }
+
+  &[disabled]::before {
+    border: 2px solid var(--b2b-state-disabled);
+  }
+}

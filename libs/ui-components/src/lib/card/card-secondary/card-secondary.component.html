@@ -1,0 +1,24 @@
+<div class="b2b-card-label b2b-card-label-top">
+  <ng-content select="[b2b-card-label-top]"></ng-content>
+</div>
+
+<div class="b2b-card-container">
+  <ng-content select="[b2b-card-placeholder-upper]"></ng-content>
+
+  <div class="b2b-card-body">
+    <div class="b2b-card-title b2b-titles-size-09">{{ title() }}</div>
+    @if (description()) {
+      <p>{{ description() }}</p>
+    }
+  </div>
+
+  <ng-content select="[b2b-card-placeholder-lower]"></ng-content>
+
+  <div class="b2b-card-footer">
+    <ng-content select="[b2b-card-footer]"></ng-content>
+  </div>
+</div>
+
+<div class="b2b-card-label b2b-card-label-bottom">
+  <ng-content select="[b2b-card-label-bottom]"></ng-content>
+</div>

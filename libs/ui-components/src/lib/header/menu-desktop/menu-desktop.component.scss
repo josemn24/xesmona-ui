@@ -1,0 +1,30 @@
+@import '../../../styles/abstracts/responsive';
+
+:host {
+  display: none;
+
+  @include b2b-breakpoint('lg') {
+    display: block;
+  }
+
+  .menu-section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--b2b-gray-scale-03);
+
+    @include b2b-breakpoint('lg') {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+
+    @include b2b-breakpoint('lg') {
+      flex-direction: row;
+      column-gap: 2rem;
+    }
+  }
+}

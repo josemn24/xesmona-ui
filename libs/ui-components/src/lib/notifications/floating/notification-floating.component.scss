@@ -1,0 +1,220 @@
+:host {
+  .b2b-notification-floating-wrapper {
+    display: flex;
+    width: fit-content;
+    min-width: 392px;
+    max-width: 808px;
+    position: absolute;
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+
+    &.top {
+      top: 3.5rem;
+      animation: moveInTop 600ms;
+      animation-timing-function: cubic-bezier(0, 0, 0.58, 1);
+
+      @media screen and (max-width: 480px) {
+        animation: moveInTopMobile 600ms;
+        margin: 0 auto;
+        right: 0;
+        left: 0;
+      }
+
+      &.hidden {
+        display: none;
+        animation: moveOutTop 600ms;
+        animation-timing-function: cubic-bezier(0, 0, 0.58, 1);
+
+        @media screen and (max-width: 480px) {
+          margin: 0 auto;
+          right: 0;
+          left: 0;
+        }
+      }
+    }
+
+    &.bottom {
+      bottom: 3.5rem;
+      animation: moveInBottom 600ms;
+      animation-timing-function: cubic-bezier(0, 0, 0.58, 1);
+
+      @media screen and (max-width: 480px) {
+        animation: moveInBottomMobile 600ms;
+        margin: 0 auto;
+        right: 0;
+        left: 0;
+      }
+
+      &.hidden {
+        display: none;
+        animation: moveOutBottom 600ms;
+        animation-timing-function: cubic-bezier(0, 0, 0.58, 1);
+
+        @media screen and (max-width: 480px) {
+          margin: 0 auto;
+          right: 0;
+          left: 0;
+        }
+      }
+    }
+
+    @keyframes moveInTop {
+      from {
+        display: none;
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        transform: translateY(0);
+      }
+  
+      to {
+        display: flex;
+        opacity: 1;
+        position: absolute;
+      }
+    }
+
+    @keyframes moveOutTop {
+      from {
+        display: flex;
+        opacity: 1;
+        position: absolute;
+      }
+  
+      to {
+        opacity: 0;
+        transform: translateY(-3.5rem);
+      }
+    }
+
+    @keyframes moveInBottom {
+      from {
+        display: none;
+        opacity: 0;
+        position: absolute;
+        bottom: 0;
+        transform: translateY(0);
+      }
+  
+      to {
+        display: flex;
+        opacity: 1;
+        position: absolute;
+      }
+    }
+
+    @keyframes moveOutBottom {
+      from {
+        display: flex;
+        opacity: 1;
+        position: absolute;
+      }
+  
+      to {
+        opacity: 0;
+        transform: translateY(3.5rem);
+      }
+    }
+
+    @keyframes moveInTopMobile {
+      from {
+        display: none;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateY(0);
+      }
+
+      to {
+        display: flex;
+        opacity: 1;
+        position: absolute;
+      }
+    }
+
+    @keyframes moveInBottomMobile {
+      from {
+        display: none;
+        opacity: 0;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: translateY(0);
+      }
+  
+      to {
+        display: flex;
+        opacity: 1;
+        position: absolute;
+      }
+    }
+
+    .b2b-notification-floating-container {
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
+      border-radius: 4px;
+      border: 1px solid;
+      background-color: var(--b2b-brand-blue-01);
+      margin-left: 1rem;
+      margin-right: 1rem;
+
+      @media screen and (min-width: 960px) {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      .b2b-notification-floating-icon {
+        --b2b-icon-color: var(--b2b-gray-scale-05);
+        margin-right: .5rem;
+        width: 24px;
+      }
+
+      .b2b-notification-floating-body {
+        color: var(--b2b-gray-scale-05);
+        width: 100%;
+
+        .title {
+          font-family: var(--b2b-font-family);
+          font-weight: var(--b2b-font-weight-bold);
+        }
+
+        .description {
+          font-family: var(--b2b-font-family);
+          font-weight: var(--b2b-font-weight-regular);
+          margin: .5rem 0 0 0;
+          width: fit-content;
+        }
+      }
+
+      .b2b-notification-floating-close {
+        margin-left: .5rem;
+
+        button {
+          padding: 0;
+          background: none;
+          border: none;
+
+          :hover {
+            cursor: pointer;
+          }
+
+          b2b-icon {
+            --b2b-icon-color: var(--b2b-gray-scale-05);
+          }
+        }
+
+        &.closable {
+          b2b-icon {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+

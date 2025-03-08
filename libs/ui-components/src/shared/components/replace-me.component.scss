@@ -1,0 +1,22 @@
+:host {
+  font-family: var(--b2b-font-family);
+  font-weight: var(--b2b-font-weight-regular);
+  text-transform: uppercase;
+  color: #9747FF;
+  background: #EADAFF; 
+  border: 1px #9747FF dashed; 
+  display: inline-flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center;
+
+  &.white-bg {
+    background: #fff;
+  }
+  &.no-border {
+    border: none;
+  }
+  &.no-border-bottom {
+    border-bottom: none;
+  }
+}

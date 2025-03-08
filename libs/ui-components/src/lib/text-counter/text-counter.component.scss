@@ -1,0 +1,6 @@
+:host {
+  font-family: var(--b2b-text-counter-font-family, var(--b2b-font-family));
+  font-weight: var(--b2b-text-counter-font-weight, var(--b2b-font-weight-regular));
+  font-size: var(--b2b-text-counter-font-size, 0.875rem);
+  color: var(--b2b-text-counter-color, var(--b2b-brand-blue-04));
+}

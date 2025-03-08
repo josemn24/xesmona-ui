@@ -1,0 +1,49 @@
+:host {
+    &.b2b--invalid {
+        &:has(div[b2b-dropdown-container]:not(.show-menu)) {
+            input[b2b-dropdown-input] {
+                --b2b-dropdown-input-bg-color: var(--b2b-state-error-bg);
+                --b2b-dropdown-input-color: var(--b2b-state-error-01);
+                --b2b-dropdown-input-border-color: var(--b2b-state-error-01);
+            }
+        }
+
+        input[b2b-dropdown-input]::placeholder {
+            color: var(--b2b-state-error-01);
+        }
+    }
+
+    div[b2b-dropdown-container] {
+        position: relative;
+        width: fit-content;
+    }
+
+    b2b-dropdown-multiple-menu {
+        width: 100%;
+        position: absolute;
+        z-index: 5;
+    }
+
+    &.b2b-width-full {
+        width: 100%;
+
+        div[b2b-dropdown-container] {
+            width: auto;
+        }
+
+        b2b-dropdown-multiple-menu {
+            ::ng-deep ul {
+                width: auto;
+            }
+        }
+    
+        ::ng-deep div[b2b-dropdown-icon-wrapper] {
+            width: 100%;
+        }
+
+        input[b2b-dropdown-input] {
+            box-sizing: border-box;
+            --b2b-dropdown-input-width: 100%;
+        }
+    }
+}

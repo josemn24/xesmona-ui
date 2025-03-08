@@ -1,0 +1,36 @@
+@import '../../../styles/abstracts/responsive';
+
+:host {
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  border: none;
+  text-align: start;
+  cursor: pointer;
+  font-family: var(--b2b-font-family);
+  font-weight: var(--b2b-font-weight-regular);
+  font-size: 1.25rem;
+  color: var(--b2b-brand-blue-02);
+
+  &.active {
+    background-color: var(--b2b-gray-scale-04);
+    font-weight: var(--b2b-font-weight-medium);
+  }
+
+  @include b2b-breakpoint('lg') {
+    padding: 1rem 0;
+    font-size: 1rem;
+    &:focus {
+      outline-color: var(--b2b-state-info-01);
+      outline-offset: 2px;
+    }
+    &:hover {
+      padding-bottom: 0.75rem;
+      border-bottom: 0.25rem solid var(--b2b-tab-border-color, var(--b2b-brand-blue-02));
+    }
+    &.active {
+      background-color: transparent;
+      padding-bottom: 0.75rem;
+      border-bottom: 0.25rem solid var(--b2b-tab-border-color, var(--b2b-brand-blue-02));
+    }
+  }
+}

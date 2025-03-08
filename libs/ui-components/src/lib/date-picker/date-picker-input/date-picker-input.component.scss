@@ -1,0 +1,14 @@
+:host {
+  &.b2b-width-full {
+    width: 100%;
+
+    ::ng-deep div[b2b-field-icon-wrapper] {
+      width: 100%;
+    }
+
+    ::ng-deep input[b2b-input] {
+      box-sizing: border-box;
+      --b2b-input-width: 100%;
+    }
+  }
+}

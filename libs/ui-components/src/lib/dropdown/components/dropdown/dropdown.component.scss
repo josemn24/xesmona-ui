@@ -1,0 +1,27 @@
+:host-context(.show-menu) {
+    ::ng-deep input[b2b-dropdown-input] {
+        border-bottom: none;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        --b2b-input-padding-bottom: 1rem;
+
+        &:focus {
+            outline-style: none;
+        }
+    }
+}
+
+:host {
+    ::ng-deep input[b2b-dropdown-input] {
+        caret-color: transparent;
+        user-select: none;
+    
+        &::selection {
+            background: transparent;
+        }
+
+        &:not([disabled]) {
+            cursor: pointer;
+        }
+    }
+}

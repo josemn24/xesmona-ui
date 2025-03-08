@@ -1,0 +1,35 @@
+:host {
+  ::ng-deep label[b2b-label] {
+    display: block;
+    width: fit-content;
+    margin-bottom: 4px;
+
+    &.b2b--required {
+      &::after {
+        content:" *";
+        color: var(--b2b-brand-red-01);
+      }
+    }
+
+    &:has(+ input[b2b-input][disabled]),
+    &:has(+ div[b2b-field-icon-wrapper] > input[b2b-input][disabled]),
+    &:has(+ div[b2b-field-bank-wrapper] > input[b2b-input][disabled]) {
+      --b2b-label-color: var(--b2b-state-disabled);
+    }
+  }
+
+  ::ng-deep b2b-helper-text {
+    display: block;
+    width: fit-content;
+    margin-top: 4px;
+  }
+
+  &.b2b-width-full {
+    width: 100%;
+
+    ::ng-deep input[b2b-input] {
+      box-sizing: border-box;
+      --b2b-input-width: 100%;
+    }
+  }
+}

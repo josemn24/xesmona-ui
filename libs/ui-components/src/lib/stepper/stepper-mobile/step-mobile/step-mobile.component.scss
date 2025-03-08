@@ -1,0 +1,35 @@
+:host {
+  .b2b-step-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .b2b-step-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    border: 1px solid transparent;
+
+    &.active {
+      background-color: var(--b2b-gray-scale-05);
+      border: 1px solid var(--b2b-state-success-01);
+      color: var(--b2b-brand-blue-01);
+    }
+
+    &.filled {
+      background-color: var(--b2b-state-success-01);
+      border: 1px solid var(--b2b-state-success-01);
+      color: var(--b2b-gray-scale-05);
+    }
+
+    &.inactive {
+      background-color: var(--b2b-brand-blue-02);
+      border: 1px solid var(--b2b-brand-blue-02);
+      color: var(--b2b-gray-scale-05);
+    }
+  }
+}

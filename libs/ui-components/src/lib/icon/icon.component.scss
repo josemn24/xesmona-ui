@@ -1,0 +1,15 @@
+:host {
+  display: block;
+
+  .svg-icon {
+    height: 100%;
+    width: 100%;
+    background-color: var(--b2b-icon-color, var(--b2b-brand-blue-01));
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+  }
+}

@@ -1,0 +1,62 @@
+:host {
+  .b2b-carousel-container {
+    overflow: hidden;
+    width: 100%;
+    margin: auto;
+
+    .b2b-carousel-slides-container {
+      display: flex;
+      position: relative;
+      justify-content: center;
+  
+      .b2b-carousel-slides-wrapper {
+        position: relative;
+        width: 100%;
+        overflow-x: clip;
+  
+        .b2b-carousel-items {
+          display: flex;
+          transition: transform 0.5s ease-in-out;
+          touch-action: pan-y;
+        }
+        
+        .b2b-carousel-item {
+          flex: 0 0 100%;
+          box-sizing: border-box;
+          padding-left: 0.75rem;
+          padding-right: 0.75rem;
+        }
+      }
+    
+      button.b2b-carousel-button-left {
+        left: 0.75rem;
+      }
+    
+      button.b2b-carousel-button-right {
+        right: 0.75rem;
+      }
+    }
+
+    .b2b-carousel-pagination {
+      text-align: center;
+      margin-top: 1rem;
+    }
+  
+    &.b2b-carousel-buttons-offset {
+      .b2b-carousel-slides-container {
+        .b2b-carousel-slides-wrapper {
+          --b2b-carousel-offset: calc(var(--b2b-carousel-button-offset, 1.5rem) * 2);
+          width: calc(100% - var(--b2b-carousel-offset));
+        }
+    
+        button.b2b-carousel-button-left {
+          left: 0;
+        }
+      
+        button.b2b-carousel-button-right {
+          right: 0;
+        }
+      }
+    }
+  }
+}

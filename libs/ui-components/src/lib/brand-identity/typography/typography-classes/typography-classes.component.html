@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>CSS Class</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let typography of typographies">
+      <td>
+          <span class="b2b-class-name">{{ typography.name }}</span>
+      </td>
+      <td>
+          <span class="b2b-property">{{ getTypographyCSSClass(typography) }}</span>
+      </td>
+      <td>
+        <div [ngClass]="getTypographyClass(typography)">Lorem ipsum</div>
+      </td>
+    </tr>
+  </tbody>
+</table>

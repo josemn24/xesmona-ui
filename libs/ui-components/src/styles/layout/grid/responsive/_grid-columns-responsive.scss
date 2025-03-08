@@ -1,0 +1,105 @@
+@import '../../../abstracts/responsive';
+
+.b2b-grid {
+    @each $breakpoint, $min-width in $breakpoints {
+      &.b2b-grid-cols-none-#{$breakpoint} {
+        @include b2b-breakpoint($breakpoint) {
+            grid-template-columns: none;
+        }
+      }
+    
+      &.b2b-grid-cols-subgrid-#{$breakpoint} {
+        @include b2b-breakpoint($breakpoint) {
+            grid-template-columns: subgrid;
+        }
+      }
+    
+      @for $i from 1 through 12 {
+        &.b2b-grid-cols-#{$i}-#{$breakpoint} {
+            @include b2b-breakpoint($breakpoint) {
+                grid-template-columns: repeat(#{$i}, 1fr);
+            }
+        }
+      }
+
+      &.b2b-auto-cols-auto-#{$breakpoint} {
+        @include b2b-breakpoint($breakpoint) {
+            grid-auto-columns: auto;
+        }
+      }
+
+      &.b2b-auto-cols-min-#{$breakpoint} {
+        @include b2b-breakpoint($breakpoint) {
+            grid-auto-columns: min-content;
+        }
+      }
+
+      &.b2b-auto-cols-max-#{$breakpoint} {
+        @include b2b-breakpoint($breakpoint) {
+            grid-auto-columns: max-content;
+        }
+      }
+
+      &.b2b-auto-cols-fr-#{$breakpoint} {
+        @include b2b-breakpoint($breakpoint) {
+            grid-auto-columns: minmax(0, 1fr);
+        }
+      }
+
+      .b2b-col-auto-#{$breakpoint} {
+        @include b2b-breakpoint($breakpoint) {
+            grid-column: auto;
+        }
+      }
+
+      .b2b-col-span-full-#{$breakpoint} {
+        @include b2b-breakpoint($breakpoint) {
+          grid-column: 1 / -1;
+        }
+      }
+
+      @for $i from 1 through 12 {
+        .b2b-col-span-#{$i}-#{$breakpoint} {
+            @include b2b-breakpoint($breakpoint) {
+                grid-column: span #{$i} / span #{$i};
+            }
+        }
+      }
+
+      .b2b-col-start-auto-#{$breakpoint} {
+        @include b2b-breakpoint($breakpoint) {
+          grid-column-start: auto;
+        }
+      }
+
+      @for $i from 1 through 12 {
+        .b2b-col-start-#{$i}-#{$breakpoint} {
+            @include b2b-breakpoint($breakpoint) {
+              grid-column-start: #{$i};
+            }
+        }
+      }
+
+      .b2b-col-end-auto-#{$breakpoint} {
+        @include b2b-breakpoint($breakpoint) {
+          grid-column-end: auto;
+        }
+      }
+
+      @for $i from 1 through 12 {
+        .b2b-col-end-#{$i}-#{$breakpoint} {
+            @include b2b-breakpoint($breakpoint) {
+              grid-column-end: #{$i};
+            }
+        }
+      }
+
+      @for $i from 1 through 12 {
+        .b2b-col-#{$i}-#{$breakpoint} {
+            @include b2b-breakpoint($breakpoint) {
+              grid-column: auto / span #{$i};
+            }
+        }
+      }
+    }
+}

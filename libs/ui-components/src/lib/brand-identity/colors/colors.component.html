@@ -1,0 +1,26 @@
+<table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>CSS Variable</th>
+        <th>Color</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let color of colors">
+        <td>
+            <span class="b2b-class-name">{{ color.name }}</span>
+        </td>
+        <td>
+            <span class="b2b-property">{{ color.cssVariable }}</span>
+        </td>
+        <td>
+          <div class="color-swatch" [ngStyle]="{'background-color': color.value}"></div>
+        </td>
+        <td>
+            <span class="b2b-property">{{ color.value }}</span>
+        </td>
+      </tr>
+    </tbody>
+</table>

@@ -1,0 +1,60 @@
+:host {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  border-radius: 0.25rem;
+  height: 0.5rem;
+  background: var(--b2b-gray-scale-05);
+  border: 1px solid var(--b2b-brand-blue-04);
+
+  &.b2b-width-full {
+    width: 100%;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 24px;
+    width: 24px;
+    background: transparent;
+    background-image: url(/assets/b2b-components/components/icon-slider.svg);
+    background-size: cover;
+    border-radius: 50%;
+    border: none;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      background-image: url(/assets/b2b-components/components/icon-slider-hover.svg);
+    }
+  }
+
+  &:focus-visible::-webkit-slider-thumb {
+    border-radius: 2px;
+    outline: 0.125rem solid var(--b2b-state-info-01);
+    outline-offset: 1px;
+  }
+  
+  &::-moz-range-thumb {
+    appearance: none;
+    height: 24px;
+    width: 24px;
+    background: transparent;
+    background-image: url(/assets/b2b-components/components/icon-slider.svg);
+    background-size: cover;
+    border-radius: 50%;
+    border: none;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      background-image: url(/assets/b2b-components/components/icon-slider-hover.svg);
+    }
+  }
+  
+  &:focus-visible::-moz-range-thumb {
+    border-radius: 2px;
+    outline: 0.125rem solid var(--b2b-state-info-01);
+    outline-offset: 1px;
+  }
+}

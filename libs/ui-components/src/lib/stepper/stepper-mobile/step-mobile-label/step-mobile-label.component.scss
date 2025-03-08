@@ -1,0 +1,36 @@
+:host {
+
+  .b2b-step-info-container, .b2b-step-info-container-nosub {
+    display: flex;
+    flex-direction: column;
+
+    .b2b-step-title {
+      font-size: var(--b2b-text-font-size);
+      color: var(--b2b-brand-blue-01);
+      font-family: var(--b2b-step-title-font-family, var(--b2b-font-family));
+      font-weight: var(--b2b-step-title-font-weight, var(--b2b-font-weight-medium));
+    }
+
+    .b2b-step-subtitle {
+      margin-top: 0.5rem;
+      font-size: var(--b2b-text-caption-s-font-size);
+      color: var(--b2b-brand-blue-02);
+      font-family: var(--b2b-step-subtitle-font-family, var(--b2b-font-family));
+      font-weight: var(--b2b-step-subtitle-font-weight, var(--b2b-font-weight-regular));
+    }
+
+    .b2b-step-title, .b2b-step-subtitle {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      max-width: 100vw;
+    }
+
+    &-nosub {
+      .step-subtitle {
+        display: none;
+      }
+    }
+  }
+}

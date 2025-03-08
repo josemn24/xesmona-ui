@@ -1,0 +1,60 @@
+@import '../../../abstracts/responsive';
+@import '../grid-utilities';
+
+.b2b-grid {
+    @each $breakpoint, $min-width in $breakpoints {
+        &.b2b-grid-flow-row-#{$breakpoint} {
+            @include b2b-breakpoint($breakpoint) {
+                grid-auto-flow: row;
+            }
+        }
+
+        &.b2b-grid-flow-column-#{$breakpoint} {
+            @include b2b-breakpoint($breakpoint) {
+                grid-auto-flow: column;
+            }
+        }
+
+        &.b2b-grid-flow-dense-#{$breakpoint} {
+            @include b2b-breakpoint($breakpoint) {
+                grid-auto-flow: dense;
+            }
+        }
+
+        &.b2b-grid-flow-row-dense-#{$breakpoint} {
+            @include b2b-breakpoint($breakpoint) {
+                grid-auto-flow: row dense;
+            }
+        }
+
+        &.b2b-grid-flow-column-dense-#{$breakpoint} {
+            @include b2b-breakpoint($breakpoint) {
+                grid-auto-flow: column dense;
+            }
+        }
+
+        @each $gap in $gaps {
+            &.b2b-gap-#{$gap}-#{$breakpoint} {
+                @include b2b-breakpoint($breakpoint) {
+                    gap: var(--b2b-space-#{$gap});
+                }
+            }
+        }
+
+        @each $gap in $gaps {
+            &.b2b-gap-x-#{$gap}-#{$breakpoint} {
+                @include b2b-breakpoint($breakpoint) {
+                    column-gap: var(--b2b-space-#{$gap});
+                }
+            }
+        }
+
+        @each $gap in $gaps {
+            &.b2b-gap-y-#{$gap}-#{$breakpoint} {
+                @include b2b-breakpoint($breakpoint) {
+                    row-gap: var(--b2b-space-#{$gap});
+                }
+            }
+        }
+    }
+}

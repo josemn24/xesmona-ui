@@ -1,0 +1,13 @@
+<ul class="b2b-stepper-container">
+  @for (step of steps; track step; let i = $index) {
+    <b2b-step-mobile 
+      [state]="getStepState(step)" 
+      [number]="i + 1" 
+      (click)="onStepChange(step)">
+    </b2b-step-mobile>
+  }
+</ul>
+<b2b-step-mobile-label
+  [title]="getLabelTitle()"
+  [subtitle]="getLabelSubtitle()">
+</b2b-step-mobile-label>

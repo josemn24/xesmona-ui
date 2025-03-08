@@ -1,0 +1,7 @@
+<li class="b2b-step-container" [tabindex]="getTabindex()">
+  <span [ngClass]="['b2b-step-number', state]" >{{number}}</span>
+    <div [ngClass]="getStateStyles(state, subtitle)">
+    <span class="b2b-step-title">{{title}}</span>
+    <span [ngClass]="[subtitle, 'b2b-step-subtitle']">{{subtitle}}</span>
+  </div>
+</li>

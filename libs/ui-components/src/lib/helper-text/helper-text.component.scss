@@ -1,0 +1,16 @@
+:host {
+  font-family: var(--b2b-helper-text-font-family, var(--b2b-font-family));
+  font-weight: var(--b2b-helper-text-font-weight, var(--b2b-font-weight-regular));
+  font-size: var(--b2b-helper-text-font-size, var(--b2b-text-caption-m-font-size));
+  color: var(--b2b-helper-text-color, var(--b2b-brand-blue-02));
+
+  .b2b-helper-text {
+    display: flex;
+    column-gap: 0.25rem;
+  }
+
+  .b2b--invalid {
+    color: var(--b2b-state-error-01);
+    --b2b-icon-color: var(--b2b-state-error-01);
+  }
+}

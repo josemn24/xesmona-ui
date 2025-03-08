@@ -1,0 +1,51 @@
+@import '../../../abstracts/responsive';
+
+@each $breakpoint, $min-width in $breakpoints {
+    .b2b-block-#{$breakpoint} {
+        @include b2b-breakpoint($breakpoint) {
+            display: block;
+        }
+    }
+
+    .b2b-inline-block-#{$breakpoint} {
+        @include b2b-breakpoint($breakpoint) {
+            display: inline-block;
+        }
+    }
+
+    .b2b-inline-#{$breakpoint} {
+        @include b2b-breakpoint($breakpoint) {
+            display: inline;
+        }
+    }
+
+    .b2b-flex-#{$breakpoint} {
+        @include b2b-breakpoint($breakpoint) {
+            display: flex;
+        }
+    }
+
+    .b2b-inline-flex-#{$breakpoint} {
+        @include b2b-breakpoint($breakpoint) {
+            display: inline-flex;
+        }
+    }
+
+    .b2b-hidden-#{$breakpoint} {
+        @include b2b-breakpoint($breakpoint) {
+            display: none;
+        }
+    }
+
+    .b2b-grid-#{$breakpoint} {
+        @include b2b-breakpoint($breakpoint) {
+            display: grid;
+        }
+    }
+
+    .b2b-inline-grid-#{$breakpoint} {
+        @include b2b-breakpoint($breakpoint) {
+            display: inline-grid;
+        }
+    }
+}

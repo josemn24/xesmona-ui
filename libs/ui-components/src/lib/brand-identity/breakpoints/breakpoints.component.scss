@@ -1,0 +1,32 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  font-family: var(--b2b-font-family);
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+
+  span {
+    font-size: 14px;
+  }
+}
+
+.b2b-class-name {
+  font-weight: var(--b2b-font-weight-medium);
+  color: var(--b2b-brand-blue-01);
+}
+
+.b2b-property {
+  color: var(--b2b-brand-blue-02);
+}
+
+p {
+  font-family: var(--b2b-font-family);
+}
+
+pre, code {
+  background-color: var(--b2b-gray-scale-04);
+}

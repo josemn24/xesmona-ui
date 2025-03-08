@@ -1,0 +1,86 @@
+:host {
+  position: relative;
+  display: inline-block;
+
+  &.left-icon {
+    ::ng-deep input[b2b-dropdown-input] {
+      padding-left: 2.5rem;
+    }
+
+    ::ng-deep b2b-icon {
+      position: absolute;
+      top: 0.5rem;
+
+      &:first-of-type {
+        --b2b-icon-color: var(--b2b-brand-blue-02);
+        left: 0.5rem;
+
+        &:has(+ input[b2b-dropdown-input].read-only:not([disabled])) {
+          --b2b-icon-color: var(--b2b-brand-blue-04);
+        }
+
+        &:has(+ input[b2b-dropdown-input][disabled]) {
+          --b2b-icon-color: var(--b2b-state-disabled);
+        }
+      }
+    }
+  }
+
+  &.right-icon {
+    ::ng-deep input[b2b-dropdown-input] {
+      padding-right: 2.5rem;
+
+      + b2b-icon:last-of-type {
+        position: absolute;
+        --b2b-icon-color: var(--b2b-brand-blue-02);
+        top: 0.5rem;
+        right: 0.5rem;
+        cursor: pointer;
+      }
+
+      &.read-only:not([disabled]) {
+        + b2b-icon:last-of-type {
+          --b2b-icon-color: var(--b2b-brand-blue-04);
+        }
+      }
+
+      &[disabled] {
+        + b2b-icon:last-of-type {
+          pointer-events: none;
+          --b2b-icon-color: var(--b2b-state-disabled);
+        }
+
+        + button:has(b2b-icon) {
+          pointer-events: none;
+          b2b-icon {
+            --b2b-icon-color: var(--b2b-state-disabled);
+          }
+        }
+      }
+
+      /* Styles for a button with an icon */
+
+      + button:has(b2b-icon) {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        outline: inherit;
+        cursor: pointer;
+      }
+
+      + button > b2b-icon:last-of-type {
+        --b2b-icon-color: var(--b2b-brand-blue-02);
+        position: static;
+      }
+
+      + button:focus {
+        outline: auto;
+        outline-color: var(--b2b-state-info-01);
+      }
+    }
+  }
+}

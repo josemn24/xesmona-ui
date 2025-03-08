@@ -1,0 +1,109 @@
+@import '../../styles/abstracts/responsive';
+
+:host {
+    .b2b-container {
+        box-sizing: border-box;
+        border-radius: var(--b2b-container-border-radius, 8px);
+        border: 0.5px solid var(--b2b-gray-scale-03);
+        background: var(--b2b-gray-scale-05);
+        color: var(--b2b-brand-blue-01);
+        font-family: var(--b2b-font-family);
+        font-weight: var(--b2b-font-weight-regular);
+        /* Default */
+        box-shadow: 0px 2px 8px 0px rgba(82, 101, 112, 0.20);
+    }
+    
+    .b2b-container-header {
+        box-sizing: border-box;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        padding: 1.5rem;
+
+        .b2b-container-title {
+            font-weight: var(--b2b-font-weight-medium);
+        }
+
+        &:focus {
+            outline-color: var(--b2b-state-info-01);
+          }
+
+        @include b2b-breakpoint('md') {
+            .b2b-container-title {
+                font-size: 20px;
+            }
+        }
+    }
+    
+    .b2b-container-functions {
+        display: flex;
+        gap: 1.5rem;
+        --b2b-icon-color: var(--b2b-brand-blue-02);
+
+        .b2b-container-arrow {
+            width: 1.5rem;
+            height: 1.5rem;
+            --b2b-icon-color: var(--b2b-brand-blue-01);
+        }
+
+        ::ng-deep b2b-icon {
+          &.b2b-icon-right {
+            color: var(--b2b-brand-blue-02);
+          }
+        }
+    }
+
+    .b2b-container-body {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .b2b-container-footer {
+        box-sizing: border-box;
+        &:not(:empty) {
+            padding: 1.5rem;
+            padding-top: 0;
+        }
+    }
+
+    .b2b-container-separator {
+        margin: 0 1.5rem;
+        hr {
+            margin: 0;
+            border: 0;
+            width: 100%;
+            height: 1px;
+            background: var(--b2b-gray-scale-03-Grey, #EAE9E9);
+        }
+    }
+
+    ::ng-deep button[b2b-button] {
+        display: flex;
+        justify-content: center;
+
+        --b2b-button-padding-top: 1rem;
+        --b2b-button-padding-right: 1rem;
+        --b2b-button-padding-bottom: 1rem;
+        --b2b-button-padding-left: 1rem;
+
+        @include b2b-breakpoint('md') {
+            &.b2b--secondary {
+                --b2b-button-padding-top: 15px;
+                --b2b-button-padding-bottom: 15px;
+            }
+        }
+        @include b2b-breakpoint('lg') {
+            --b2b-button-padding-top: 0.5rem;
+            --b2b-button-padding-right: 1rem;
+            --b2b-button-padding-bottom: 0.5rem;
+            --b2b-button-padding-left: 1rem;
+            &.b2b--secondary {
+                --b2b-button-padding-top: 7px;
+                --b2b-button-padding-bottom: 7px;
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@if (classesType === 'intro') {
+
+} @else {
+  <table>
+    <thead>
+      <tr>
+        <th>Class</th>
+        <th>Properties</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cssClass of cssClasses">
+        <td>
+          <span class="b2b-class-name">{{ cssClass.className }}</span>
+        </td>
+        <td>
+          <span class="b2b-property">{{ cssClass.property }}</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+}

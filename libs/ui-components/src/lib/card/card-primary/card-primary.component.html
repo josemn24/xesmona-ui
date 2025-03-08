@@ -1,0 +1,14 @@
+<div class="b2b-card-image" [class]="aspectRatioClass()">
+  <img [src]="imageSrc()" alt="Card Image" />
+</div>
+
+<div class="b2b-card-body">
+  <ng-content select="[b2b-card-placeholder-upper]"></ng-content>
+
+  <div>
+    <div class="b2b-card-title b2b-titles-size-09">{{ title() }}</div>
+    <p>{{ description() }}</p>
+  </div>
+
+  <ng-content select="[b2b-card-placeholder-lower]"></ng-content>
+</div>

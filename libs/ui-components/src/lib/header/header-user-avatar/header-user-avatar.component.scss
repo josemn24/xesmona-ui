@@ -1,0 +1,29 @@
+:host {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: var(--b2b-user-avatar-width, 34px);
+  height: var(--b2b-user-avatar-height, 34px);
+  
+  &:focus {
+    outline-color: var(--b2b-state-info-01);
+    outline-offset: 2px;
+  }
+
+  .user-avatar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--b2b-user-avatar-font-family, var(--b2b-font-family));
+    font-weight: var(--b2b-user-avatar-font-weight, var(--b2b-font-weight-regular));
+    font-size: var(--b2b-user-avatar-font-size, 0.875rem);
+    color: var(--b2b-user-avatar-color, var(--b2b-gray-scale-05));
+    background-color: var(--b2b-user-avatar-bg-color, var(--b2b-brand-blue-02));
+    border-radius: 50%;
+  }
+}

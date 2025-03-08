@@ -1,0 +1,141 @@
+:host {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  font-family: var(--b2b-button-font-family, var(--b2b-font-family));
+  font-weight: var(--b2b-button-font-weight, var(--b2b-font-weight-bold));
+  font-size: var(--b2b-button-font-size, var(--b2b-cta-font-size));
+  line-height: var(--b2b-button-line-height, 1.5rem);
+  padding-top: var(--b2b-button-padding-top, var(--b2b-button-padding, 1rem));
+  padding-right: var(--b2b-button-padding-right, var(--b2b-button-padding, 1rem));
+  padding-bottom: var(--b2b-button-padding-bottom, var(--b2b-button-padding, 1rem));
+  padding-left: var(--b2b-button-padding-left, var(--b2b-button-padding, 1rem));
+  background-color: var(--b2b-button-bg-color);
+  color: var(--b2b-button-color);
+  border-color: var(--b2b-button-border-color);
+  border-radius: var(--b2b-button-border-radius, 0.5rem);
+  border-style: var(--b2b-button-border-style, solid);
+  border-width: var(--b2b-button-border-width, 0px);
+  box-shadow: var(--b2b-button-box-shadow);
+  --b2b-icon-color: var(--b2b-button-color);
+
+  ::ng-deep b2b-icon {
+    &.b2b-icon-left {
+      margin-right: 0.25rem;
+    }
+    &.b2b-icon-right {
+      margin-left: 0.25rem;
+    }
+  }
+
+  &.b2b {
+    &--primary {
+      --b2b-button-bg-color: var(--b2b-brand-red-01);
+      --b2b-button-color: var(--b2b-gray-scale-05);
+  
+      &:hover {
+        --b2b-button-bg-color: var(--b2b-brand-red-03);
+      }
+  
+      &:focus-visible {
+        outline-offset: 2px;
+        outline-width: 2px;
+        outline-style: solid;
+        outline-color: var(--b2b-state-info-01);
+      }
+
+      &[disabled] {
+        --b2b-button-bg-color: var(--b2b-state-disabled);
+        --b2b-button-color: var(--b2b-gray-scale-05);
+        cursor: not-allowed;
+      }
+    }
+  
+    &--secondary {
+      --b2b-button-bg-color: var(--b2b-gray-scale-05);
+      --b2b-button-color: var(--b2b-brand-red-01);
+      --b2b-button-padding: 15px;
+      --b2b-button-border-width: 1px;
+      --b2b-button-border-color: var(--b2b-brand-red-01);
+  
+      &:hover {
+        --b2b-button-bg-color: var(--b2b-state-error-bg);
+        --b2b-button-color: var(--b2b-brand-red-03);
+        --b2b-button-border-width: 1px;
+        --b2b-button-border-color: var(--b2b-brand-red-03);
+      }
+  
+      &:focus-visible {
+        outline-offset: -2px;
+        outline-width: 2px;
+        outline-style: solid;
+        outline-color: var(--b2b-state-info-01);
+      }
+
+      &[disabled] {
+        --b2b-button-bg-color: var(--b2b-gray-scale-05);
+        --b2b-button-color: var(--b2b-state-disabled);
+        --b2b-button-border-color: var(--b2b-state-disabled);
+        cursor: not-allowed;
+      }
+    }
+  
+    &--tertiary {
+      --b2b-button-bg-color: transparent;
+      --b2b-button-color: var(--b2b-brand-red-01);
+  
+      &:hover {
+        --b2b-button-bg-color: var(--b2b-state-error-bg);
+        --b2b-button-color: var(--b2b-brand-red-03);
+      }
+
+      &:focus-visible {
+        outline-offset: -2px;
+        outline-width: 2px;
+        outline-style: solid;
+        outline-color: var(--b2b-state-info-01);
+      }
+  
+      &[disabled] {
+        --b2b-button-color: var(--b2b-state-disabled);
+        cursor: not-allowed;
+      }
+    }
+
+    &--auxiliary {
+      --b2b-button-bg-color: var(--b2b-brand-blue-02);
+      --b2b-button-color: var(--b2b-gray-scale-05);
+  
+      &:hover {
+        --b2b-button-bg-color: var(--b2b-brand-blue-01);
+      }
+
+      &:focus-visible {
+        outline-offset: 2px;
+        outline-width: 2px;
+        outline-style: solid;
+        outline-color: var(--b2b-state-info-01);
+      }
+  
+      &[disabled] {
+        --b2b-button-bg-color: var(--b2b-state-disabled);
+        --b2b-button-color: var(--b2b-gray-scale-05);
+        cursor: not-allowed;
+      }
+    }
+
+    &--large {
+      --b2b-button-padding-top: 1rem;
+      --b2b-button-padding-right: 1rem;
+      --b2b-button-padding-bottom: 1rem;
+      --b2b-button-padding-left: 1rem;
+    }
+
+    &--small {
+      --b2b-button-padding-top: 0.5rem;
+      --b2b-button-padding-right: 1rem;
+      --b2b-button-padding-bottom: 0.5rem;
+      --b2b-button-padding-left: 1rem;
+    }
+  }
+}

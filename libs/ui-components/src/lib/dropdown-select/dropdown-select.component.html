@@ -1,0 +1,37 @@
+<div
+  b2b-dropdown-container
+  b2b-menu-container
+  aria-haspopup="listbox"
+  [optionLabel]="optionLabel"
+  (enterKeyDown)="onMenuOption($event)"
+>
+  <b2b-dropdown-field [label]="label" [inputName]="inputName" [required]="required">
+    <input
+      b2b-dropdown-input
+      b2b-dropdown-input-blur
+      [ngClass]="{'read-only': readOnly}"
+      [id]="inputName"
+      [name]="inputName"
+      type="text"
+      [placeholder]="placeHolder"
+      [value]="currentOptionInputValue()"
+      [attr.disabled]="disabled || null"
+      readonly
+    >
+  </b2b-dropdown-field>
+  <b2b-dropdown-menu [options]="options">
+    <ul class="b2b-menu" role="listbox" id="dropdown-menu">
+      @for (result of options; track result; let i = $index) {
+        <li
+          b2b-menu-option
+          tabindex="-1"
+          [optionId]="i"
+          [ngClass]="{'selected': isSelected(result)}"
+          (clicked)="onMenuOption(result)"
+        >
+          <div>{{ optionLabel ? getOptionLabel(result, optionLabel) : result }}</div>
+        </li>
+      }
+    </ul>
+  </b2b-dropdown-menu>
+</div>

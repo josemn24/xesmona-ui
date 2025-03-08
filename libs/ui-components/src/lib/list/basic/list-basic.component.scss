@@ -1,0 +1,35 @@
+:host {
+  .b2b-list-basic-wrapper {
+    .b2b-list-basic-container {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem 0;
+      align-items: center;
+      --b2b-icon-color: var(--b2b-brand-blue-04);
+    }
+
+    .b2b-list-basic-header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      justify-content: flex-start;
+      font-family: var(--b2b-list-basic-font-family, var(--b2b-font-family));
+      font-weight: var(--b2b-list-basic-font-weight, var(--b2b-font-weight-regular));
+
+      span {
+        color: var(--b2b-brand-blue-01);
+        font-size: var(--b2b-list-basic-font-size, 1rem);
+      }
+    }
+  }
+}
+
+:host-context([b2b-list].b2b-list-size-m) {
+  .b2b-list-basic-wrapper {
+    .b2b-list-basic-header {
+      span {
+        font-size: var(--b2b-list-basic-font-size, 1.25rem);
+      }
+    }
+  }
+}

@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'lib-button',
-  imports: [CommonModule],
+  // eslint-disable-next-line @angular-eslint/component-selector
+  selector: 'button[b2b-button]',
   templateUrl: './button.component.html',
-  styleUrl: './button.component.css',
+  styleUrls: ['./button.component.scss'],
+  standalone: true,
 })
-export class ButtonComponent {}
+export class B2bButtonComponent {}

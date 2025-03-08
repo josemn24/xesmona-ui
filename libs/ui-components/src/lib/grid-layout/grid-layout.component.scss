@@ -1,0 +1,28 @@
+@import '../../styles/abstracts/responsive.scss';
+
+:host {
+  &.b2b-grid-twelve-columns {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  &.b2b-grid-responsive-columns {
+    grid-template-columns: repeat(4, 1fr);
+
+    @include b2b-breakpoint('md') {
+      grid-template-columns: repeat(8, 1fr);
+    }
+
+    @include b2b-breakpoint('lg') {
+      grid-template-columns: repeat(12, 1fr);
+    }
+  }
+
+  &.b2b-gap-default {
+    row-gap: var(--b2b-space-m);
+    column-gap: var(--b2b-space-l);
+
+    @include b2b-breakpoint('3xl') {
+      row-gap: var(--b2b-space-l);
+    }
+  }
+}

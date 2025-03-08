@@ -1,0 +1,18 @@
+<div class="b2b-footer-wrapper">
+  <div class="b2b-footer-container" *ngIf="hasExternalActions || hasActions">
+    <div *ngIf="hasActions && !hasExternalActions" class="b2b-footer-content">
+      {{ content }}
+    </div>
+
+    <div *ngIf="hasActions" class="b2b-footer-actions b2b-footer-links">
+      <ng-content select="[b2b-footer-links]"></ng-content>
+    </div>
+
+    <div *ngIf="hasExternalActions && hasActions" class="b2b-footer-actions b2b-footer-external-links">
+      <ng-content select="[b2b-footer-external-links]"></ng-content>
+    </div>
+  </div>
+  <div *ngIf="!hasActions && !hasExternalActions || hasActions && hasExternalActions" class="b2b-footer-content">
+    {{ content }}
+  </div>
+</div>

@@ -1,0 +1,21 @@
+:host {
+  .b2b-breadcrumbs {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+  }
+
+  ::ng-deep b2b-breadcrumb-item + b2b-breadcrumb-item:before {
+    padding-top: 0.25rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    color: var(--b2b-brand-blue-01);
+    content: url(/assets/b2b-components/components/icon-simple-arrow-right-light.svg);
+  }
+
+  &.b2b-breadcrumbs-bar {
+    ::ng-deep b2b-breadcrumb-item + b2b-breadcrumb-item:before {
+      content: url(/assets/b2b-components/components/icon-simple-arrow-right.svg);
+    }
+  }
+}

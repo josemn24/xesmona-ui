@@ -1,0 +1,59 @@
+:host {
+  .b2b-list-function-wrapper {
+    border-bottom: 1px solid var(--b2b-gray-scale-03);
+
+    .b2b-list-function-container {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 0;
+
+      ::ng-deep a[b2b-link] {
+        height: fit-content;
+      }
+    }
+
+    .b2b-list-function-header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      justify-content: flex-start;
+      font-family: var(--b2b-list-function-font-family, var(--b2b-font-family));
+      font-weight: var(--b2b-list-function-font-weight, var(--b2b-font-weight-medium));
+
+      span {
+        color: var(--b2b-brand-blue-01);
+        font-size: var(--b2b-list-function-font-size, 1rem);
+      }
+    }
+
+    .b2b-list-function-title {
+      overflow-wrap: anywhere;
+    }
+
+    .b2b-list-function-description {
+      margin: 0;
+      color: var(--b2b-brand-blue-02);
+      font-family: var(--b2b-list-function-font-family, var(--b2b-font-family));
+      font-weight: var(--b2b-list-function-font-weight, var(--b2b-font-weight-regular));
+      font-size: var(--b2b-list-function-font-size, 0.875rem);
+    }
+  }
+}
+
+:host-context([b2b-list].b2b-list-size-m) {
+  .b2b-list-function-wrapper {
+    .b2b-list-function-container {
+      padding: 1.5rem 0;
+    }
+
+    .b2b-list-function-header {
+      span {
+        font-size: var(--b2b-list-function-font-size, 1.25rem);
+      }
+    }
+
+    .b2b-list-function-description {
+      font-size: var(--b2b-list-function-font-size, 1rem);
+    }
+  }
+}

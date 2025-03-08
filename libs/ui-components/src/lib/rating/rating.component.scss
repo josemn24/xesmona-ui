@@ -1,0 +1,32 @@
+:host {
+  .b2b-rating {
+    display: flex;
+    column-gap: 0.5rem;
+    align-items: center;
+
+    label {
+      cursor: pointer;
+      position: relative;
+    }
+    
+    .b2b-rating-radio {
+      position: absolute;
+      opacity: 0;
+      width: 24px;
+      height: 24px;
+      margin: 0;
+      cursor: pointer;
+    }
+    
+    .b2b-rating-radio:focus-visible + .b2b-star svg {
+      border-radius: 0.25rem;
+      outline: 2px solid var(--b2b-state-info-01);
+    }
+    
+    .b2b-star {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

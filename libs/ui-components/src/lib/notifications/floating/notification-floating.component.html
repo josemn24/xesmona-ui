@@ -1,0 +1,24 @@
+<div [ngClass]="getVisibility(visible)" direction=direction>
+  <div [ngClass]="['b2b-notification-floating-container', state]">
+    <div [ngClass]="['b2b-notification-floating-icon', state]">
+      @if (state) {
+        <b2b-icon [name]="getIcon(state)" size="md"></b2b-icon>
+      }
+    </div>
+
+    <div class="b2b-notification-floating-body">
+      <span class="title">{{ title }}</span>
+      @if (description) {
+        <p class="description">{{ description }}</p>
+      }
+    </div>
+
+    @if (closable) {
+      <div [ngClass]="getAutoClose(closable)">
+        <button (click)="onClose()" aria-label="Close">
+          <b2b-icon name="icon-close" size="sm"></b2b-icon>
+        </button>
+      </div>
+    }
+  </div>
+</div>

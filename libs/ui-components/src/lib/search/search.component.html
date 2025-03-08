@@ -1,0 +1,63 @@
+<div
+  b2b-auto-complete-container
+  (enterKeyDown)="onAutoCompleteOption($event)"
+>
+  <b2b-search-field [label]="label" [inputName]="inputName" [required]="required">
+    <input
+      b2b-input
+      b2b-auto-complete-input
+      type="text"
+      [id]="inputName"
+      [name]="inputName"
+      [placeholder]="placeHolder"
+      [value]="searchInputValue()"
+      [attr.disabled]="disabled || null"
+      [attr.readonly]="readOnly || null"
+      (input)="onInput($event)"
+      autocomplete="off"
+    >
+    @if (showCloseButton()) {
+      <button type="button" (click)="onClose()">
+        <b2b-icon name="icon-close"></b2b-icon>
+      </button>
+    }
+  </b2b-search-field>
+
+  <b2b-search-autocomplete [results]="filteredSuggestions()">
+    @if (searchValue() && searchValue().length > 0 && !(filteredSuggestions() || []).length) {
+      <ng-container>
+        <div class="b2b-autocomplete b2b-autocomplete-text-center">
+          {{ noResultsLabel }}
+        </div>
+      </ng-container>
+    }
+    
+    <ng-container>
+      @if ((filteredSuggestions() || []).length > 0) {
+        <ul class="b2b-autocomplete" role="listbox" id="search-autocomplete">
+          @for (result of filteredSuggestions(); track result; let i = $index) {
+            <li
+              b2b-autocomplete-option
+              tabindex="-1"
+              [optionId]="i"
+              (clicked)="onAutoCompleteOption(result)"
+            >
+              @if (!searchValue() || searchValue().length === 0) {
+                <b2b-icon name="icon-time"></b2b-icon>
+                {{ optionLabel ? getOptionValue(result, optionLabel) : result }}
+              }
+      
+              @if (searchValue() && searchValue().length > 0) {
+                @if (!optionLabel) {
+                  <div [innerHTML]="result | bold:searchValue()"></div>
+                } @else {
+                  <div [innerHTML]="getOptionValue(result, optionLabel) | bold:searchValue()"></div>
+                }
+              }
+            </li>
+          }
+        </ul>
+      }
+    </ng-container>
+  </b2b-search-autocomplete>
+</div>

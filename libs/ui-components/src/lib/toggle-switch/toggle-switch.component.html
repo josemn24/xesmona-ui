@@ -1,0 +1,9 @@
+<label class="toggle" [tabIndex]="getTabIndex()" [attr.disabled]="disabled || null" (keydown)="onKeyboardEvent($event)">
+    <input
+        [(ngModel)]="checked"
+        type="checkbox"
+        [id]="inputId"
+        (change)="onCheckedChange()"
+    >
+    <div class="slider"></div>
+</label>

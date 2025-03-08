@@ -1,0 +1,69 @@
+:host {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--b2b-tag-font-family, var(--b2b-font-family));
+  font-weight: var(--b2b-tag-font-weight, var(--b2b-font-weight-regular));
+  font-size: var(--b2b-tag-font-size, 0.75rem);
+  font-weight: var(--b2b-tag-font-weight, normal);
+  padding-top: var(--b2b-tag-padding-top, var(--b2b-tag-padding, 0.25rem));
+  padding-right: var(--b2b-tag-padding-right, var(--b2b-tag-padding, 0.5rem));
+  padding-bottom: var(--b2b-tag-padding-bottom, var(--b2b-tag-, 0.25rem));
+  padding-left: var(--b2b-tag-padding-left, var(--b2b-tag-padding, 0.5rem));
+  background-color: var(--b2b-tag-bg-color);
+  color: var(--b2b-tag-color, var(--b2b-brand-blue-01));
+  border-radius: var(--b2b-tag-border-radius, 0.25rem);
+  line-height: var(--b2b-tag-line-height);
+
+  ::ng-deep b2b-icon {
+    &.b2b-icon-left {
+      margin-right: 0.5rem;
+    }
+    &.b2b-icon-right {
+      margin-left: 0.5rem;
+    }
+  }
+
+  &.b2b {
+    &--blue {
+      --b2b-tag-bg-color: var(--b2b-state-info-02);
+    }
+    
+    &--green {
+      --b2b-tag-bg-color: var(--b2b-state-success-02);
+    }
+    
+    &--red {
+      --b2b-tag-bg-color: var(--b2b-brand-red-04);
+    }
+    
+    &--orange {
+      --b2b-tag-bg-color: var(--b2b-brand-orange-01);
+    }
+    
+    &--grey {
+      --b2b-tag-bg-color: var(--b2b-gray-scale-03);
+    }
+    
+    &--small {
+      --b2b-tag-padding-top: 0.25rem;
+      --b2b-tag-padding-right: 0.5rem;
+      --b2b-tag-padding-bottom: 0.25rem;
+      --b2b-tag-padding-left: 0.5rem;
+      --b2b-tag-font-size: 12px;
+    }
+    
+    &--large {
+      --b2b-tag-padding-top: 0.5rem;
+      --b2b-tag-padding-right: 0.75rem;
+      --b2b-tag-padding-bottom: 0.5rem;
+      --b2b-tag-padding-left: 0.75rem;
+      --b2b-tag-font-size: 14px;
+      --b2b-tag-border-radius: 0.375rem;
+      --b2b-tag-line-height: 1rem;
+  
+      &:has(b2b-icon) {
+        --b2b-tag-padding-left: 0.5rem;
+      }
+    }
+  }
+}

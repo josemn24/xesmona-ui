@@ -1,0 +1,35 @@
+:host {
+  display: block;
+  cursor: pointer;
+  padding-top: 0.5rem;
+  font-family: var(--b2b-autocomplete-option-font-family, var(--b2b-font-family));
+  font-weight: var(--b2b-autocomplete-option-font-weight, var(--b2b-font-weight-regular));
+  font-size: var(--b2b-autocomplete-option-font-size, 1rem);
+  background-color: var(--b2b-autocomplete-option-bg-color);
+  color: var(--b2b-autocomplete-option-color, var(--b2b-brand-blue-02));
+  --b2b-icon-color: var(--b2b-autocomplete-option-color, var(--b2b-brand-blue-04));
+
+  .content {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    border-bottom: 1px solid var(--b2b-gray-scale-05);
+  }
+
+  &:hover, &.active {
+    --b2b-autocomplete-option-bg-color: var(--b2b-gray-scale-04);
+    --b2b-autocomplete-option-color: var(--b2b-brand-blue-01);
+
+    .content {
+      border-bottom: 1px solid var(--b2b-brand-blue-02);
+    }
+  }
+
+  ::ng-deep b {
+    font-family: var(--b2b-font-family);
+    font-weight: var(--b2b-font-weight-bold);
+  }
+}

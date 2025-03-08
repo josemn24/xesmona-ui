@@ -1,0 +1,40 @@
+:host {
+  --b2b-dropdown-menu-max-height: 256px;
+  --b2b-dropdown-menu-bg-color: var(--b2b-gray-scale-05);
+  --b2b-dropdown-menu-left-padding: 0.5rem;
+  --b2b-dropdown-menu-right-padding: 2.5rem;
+
+  ::ng-deep {
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .b2b-menu {
+      display: block;
+      overflow-y: auto;
+      background-color: var(--b2b-dropdown-menu-bg-color);
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px;
+      border-right: 1px solid var(--b2b-brand-blue-04);
+      border-bottom: 1px solid var(--b2b-brand-blue-04);
+      border-left: 1px solid var(--b2b-brand-blue-04);
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      max-height: var(--b2b-dropdown-menu-max-height);
+    }
+
+    .b2b-menu-text-center {
+      text-align: center;
+      padding-bottom: 16px;
+      color: var(--b2b-brand-blue-02);
+      font-family: var(--b2b-dropdown-menu-option-font-family, var(--b2b-font-family));
+      font-weight: var(--b2b-dropdown-menu-option-font-weight, var(--b2b-font-weight-regular));
+    }
+  }
+
+  ::ng-deep b2b-icon {
+    color: var(--b2b-brand-blue-04);
+  }
+}

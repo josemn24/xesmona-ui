@@ -1,0 +1,48 @@
+/** 
+* GRID UTILITIES - This file contains the grid utilities classes
+* CSS classes naming is based on TailwindCSS
+* https://tailwindcss.com/docs/gap
+* https://tailwindcss.com/docs/grid-auto-flow
+**/
+
+$gaps: "none", "xs", "s", "unit", "m", "l", "xl", "xxl", "3xl", "4xl";
+
+.b2b-grid {
+    &.b2b-grid-flow-row {
+        grid-auto-flow: row;
+    }
+
+    &.b2b-grid-flow-column {
+        grid-auto-flow: column;
+    }
+
+    &.b2b-grid-flow-dense {
+        grid-auto-flow: dense;
+    }
+
+    &.b2b-grid-flow-row-dense {
+        grid-auto-flow: row dense;
+    }
+
+    &.b2b-grid-flow-column-dense {
+        grid-auto-flow: column dense;
+    }
+
+    @each $gap in $gaps {
+        &.b2b-gap-#{$gap} {
+            gap: var(--b2b-space-#{$gap});
+        }
+    }
+
+    @each $gap in $gaps {
+        &.b2b-gap-x-#{$gap} {
+            column-gap: var(--b2b-space-#{$gap});
+        }
+    }
+
+    @each $gap in $gaps {
+        &.b2b-gap-y-#{$gap} {
+            row-gap: var(--b2b-space-#{$gap});
+        }
+    }
+}

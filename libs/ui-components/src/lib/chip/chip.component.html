@@ -1,0 +1,18 @@
+<div
+  class="b2b-chip-container"
+  [ngClass]="{
+    'b2b--outlined': type === 'outlined',
+    'b2b--large': size === 'lg',
+    'b2b--selected': selected,
+    'b2b--removable': removable
+  }">
+    <span class="b2b-chip-label">
+      <ng-content></ng-content>
+    </span>
+
+    @if (removable && !selected) {
+      <button tabindex="-1">
+        <b2b-icon name="icon-delete-circle" size="sm"></b2b-icon>
+      </button>
+    }
+</div>

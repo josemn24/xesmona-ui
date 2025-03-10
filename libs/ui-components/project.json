@@ -51,6 +51,20 @@
         "outputDir": "dist/storybook/ui-components",
         "configDir": "libs/ui-components/.storybook",
         "browserTarget": "ui-components:build-storybook",
+        "assets": [
+          {
+            "glob": "**/*",
+            "input": "libs/ui-components/src/assets",
+            "output": "assets/b2b-components"
+          }
+        ],
+        "styles": [
+          "libs/ui-components/src/styles.scss",
+          "libs/ui-components/.storybook/styles.scss"
+        ],
+        "stylePreprocessorOptions": {
+          "includePaths": ["libs/ui-components/src/styles.scss"]
+        },
         "compodoc": false
       },
       "configurations": {

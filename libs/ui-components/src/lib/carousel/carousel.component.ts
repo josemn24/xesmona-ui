@@ -59,6 +59,7 @@ export class B2bCarouselComponent implements AfterContentInit {
 
   ngAfterContentInit() {
     this.items = this.projectedItems?.toArray() ?? [];
+    this.calculatePaginationCount((this.items ?? []), this.responsiveItemsPerView);
     this.projectedItems?.changes?.subscribe(value => {
       this.items = value.toArray();
       this.calculatePaginationCount((this.items ?? []), this.responsiveItemsPerView);
@@ -141,7 +142,11 @@ export class B2bCarouselComponent implements AfterContentInit {
   }
 
   private calculatePaginationCount(items: any[], itemsPerView: number) {
-    this.paginationCount = items.length - itemsPerView + 1;
+    const newPaginationCount = items.length - itemsPerView + 1;
+    if (newPaginationCount < 0) {
+      return
+    }
+    this.paginationCount = newPaginationCount;
   }
   
   private getResponsiveItemsPerView(itemsPerView: number) {
